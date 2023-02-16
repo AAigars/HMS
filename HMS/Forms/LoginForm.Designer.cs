@@ -38,15 +38,15 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.PictureBox();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -141,26 +141,28 @@
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox6
+            // btnLogin
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.pictureBox6.Location = new System.Drawing.Point(53, 246);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.btnLogin.Location = new System.Drawing.Point(53, 246);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(234, 35);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.TabStop = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(145, 253);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.ForeColor = System.Drawing.Color.White;
+            this.lblLogin.Location = new System.Drawing.Point(145, 253);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(47, 20);
+            this.lblLogin.TabIndex = 10;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // lblRegister
             // 
@@ -180,8 +182,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(334, 332);
             this.Controls.Add(this.lblRegister);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
@@ -192,16 +194,16 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.ShowIcon = false;
             this.Text = "Hospital Management System";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,8 +220,8 @@
         private TextBox txtPassword;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private Label label1;
+        private PictureBox btnLogin;
+        private Label lblLogin;
         private Label lblRegister;
     }
 }

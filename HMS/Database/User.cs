@@ -1,0 +1,28 @@
+﻿using DbDataReaderMapper;
+
+namespace HMS.Database
+{
+    public class User
+    {
+        [DbColumn("id")]
+        public long Id { get; set; }
+
+        [DbColumn("department_id")]
+        public long DepartmentId { get; set; }
+
+        [DbColumn("first_name")]
+        public string? FirstName { get; set; }
+
+        [DbColumn("last_name")]
+        public string? LastName { get; set; }
+
+        [DbColumn("address")]
+        public string? Address { get; set; }
+
+        [DbColumn("phone_number")]
+        public long PhoneNumber { get; set; }
+
+        [DbColumn("role")]
+        public long Role { get; set; }
+    }
+}
