@@ -1,6 +1,6 @@
 ﻿namespace HMS.Forms
 {
-    partial class AppointmentsForm
+    partial class PatientsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentsForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientsForm));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPatients = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAppointments = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tblAppointments = new System.Windows.Forms.PictureBox();
@@ -91,30 +91,30 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // btnPatients
+            // label1
             // 
-            this.btnPatients.AutoSize = true;
-            this.btnPatients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.btnPatients.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.btnPatients.Location = new System.Drawing.Point(754, 11);
-            this.btnPatients.Name = "btnPatients";
-            this.btnPatients.Size = new System.Drawing.Size(68, 21);
-            this.btnPatients.TabIndex = 10;
-            this.btnPatients.Text = "Patients";
-            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
+            this.label1.Location = new System.Drawing.Point(754, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 21);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Patients";
             // 
-            // label2
+            // btnAppointments
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.label2.Location = new System.Drawing.Point(633, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 21);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Appointments";
+            this.btnAppointments.AutoSize = true;
+            this.btnAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
+            this.btnAppointments.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
+            this.btnAppointments.Location = new System.Drawing.Point(633, 11);
+            this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.Size = new System.Drawing.Size(115, 21);
+            this.btnAppointments.TabIndex = 11;
+            this.btnAppointments.Text = "Appointments";
+            this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
             // 
             // label3
             // 
@@ -131,9 +131,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.pictureBox4.Location = new System.Drawing.Point(625, 41);
+            this.pictureBox4.Location = new System.Drawing.Point(751, 41);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(130, 3);
+            this.pictureBox4.Size = new System.Drawing.Size(70, 3);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
@@ -177,7 +177,7 @@
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // AppointmentsForm
+            // PatientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,19 +189,19 @@
             this.Controls.Add(this.tblAppointments);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnPatients);
+            this.Controls.Add(this.btnAppointments);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "AppointmentsForm";
+            this.Name = "PatientsForm";
             this.ShowIcon = false;
             this.Text = "Hospital Management System";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AppointmentsForm_FormClosed);
-            this.Load += new System.EventHandler(this.AppointmentsForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientsForm_FormClosed);
+            this.Load += new System.EventHandler(this.PatientsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -220,8 +220,8 @@
         private PictureBox pictureBox2;
         private Label lblName;
         private PictureBox pictureBox1;
-        private Label btnPatients;
-        private Label label2;
+        private Label label1;
+        private Label btnAppointments;
         private Label label3;
         private PictureBox pictureBox4;
         private PictureBox tblAppointments;

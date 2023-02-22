@@ -4,16 +4,16 @@ using HMS.Properties;
 
 namespace HMS.Forms
 {
-    public partial class AppointmentsForm : Form
+    public partial class PatientsForm : Form
     {
         private bool isSwitching = false;
 
-        public AppointmentsForm()
+        public PatientsForm()
         {
             InitializeComponent();
         }
 
-        private void AppointmentsForm_Load(object sender, EventArgs e)
+        private void PatientsForm_Load(object sender, EventArgs e)
         {
             // sanity check for user; although the form should never be loaded without user data
             if (Program.user == null)
@@ -27,28 +27,27 @@ namespace HMS.Forms
 
             // setup table
             var table = new Table(tblAppointments);
-            table.CreateHeader(new string[] { "First Name", "Last Name", "Doctor", "Timestamp", "Actions" });
+            table.CreateHeader(new string[] { "First Name", "Last Name", "Date of Birth", "Actions" });
             table.CreateAction(Resources.View);
             table.CreateAction(Resources.Delete);
 
-            // load appointments
-            var appointments = Program.databaseManager.ExecuteMappedQuery<Appointment>("SELECT Patient.first_name, Patient.last_name, User.first_name AS doctor, timestamp FROM Appointment INNER JOIN Patient ON Appointment.patient_id = Patient.id INNER JOIN User ON Appointment.doctor_id = User.id");
+            // load patients
+            var patients = Program.databaseManager.ExecuteMappedQuery<Patient>("SELECT first_name, last_name, date_of_birth FROM Patient");
 
-            foreach (var appointment in appointments)
+            foreach (var patient in patients)
             {
                 table.CreateEntry(
                     new string?[]
                     {
-                        appointment.PatientFirstName,
-                        appointment.PatientLastName,
-                        appointment.DoctorFirstName,
-                        appointment.Timestamp
+                        patient.FirstName,
+                        patient.LastName,
+                        patient.DateOfBirth
                     }
                 );
             }
         }
 
-        private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void PatientsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             // shouldn't ever be null anyway (without LoginForm, this form won't even be instantiated)
             // force the login form to close as that is the entry point of the program
@@ -59,13 +58,13 @@ namespace HMS.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            new AddAppointmentForm().Show();
+
         }
 
-        private void btnPatients_Click(object sender, EventArgs e)
+        private void btnAppointments_Click(object sender, EventArgs e)
         {
             isSwitching = true;
-            new PatientsForm().Show();
+            new AppointmentsForm().Show();
             Close();
         }
     }

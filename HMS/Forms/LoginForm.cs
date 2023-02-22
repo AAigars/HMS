@@ -50,11 +50,6 @@ namespace HMS.Forms
             }
         }
 
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-            btnLogin_Click(sender, e);
-        }
-
         private void lblRegister_Click(object sender, EventArgs e)
         {
             // redirect to the register form
