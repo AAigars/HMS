@@ -25,15 +25,24 @@ namespace HMS.Forms
             command.Parameters.Add(new SQLiteParameter("password", txtPassword.Text));
 
             // attempt to authenticate the user
-            var user = Program.databaseManager.ExecuteMappedQuery<User>(command);
+            var user = Program.databaseManager.ExecuteMappedQuery<User>(command).FirstOrDefault();
 
             // check if the user is valid
             if (user != null)
             {
+                // check user role
+                if (user.Role == 0)
+                {
+                    MessageBox.Show("The account has not been verified, please contact a system administrator!", Program.title);
+                    return;
+                }
+
                 // allows us to access the user object globally
                 Program.user = user;
 
-                // todo: redirect to dashboard
+                // redirect to the appointments form
+                Hide();
+                new AppointmentsForm().Show();
             }
             else
             {
@@ -44,6 +53,13 @@ namespace HMS.Forms
         private void lblLogin_Click(object sender, EventArgs e)
         {
             btnLogin_Click(sender, e);
+        }
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            // redirect to the register form
+            Hide();
+            new RegisterForm().Show();
         }
     }
 }

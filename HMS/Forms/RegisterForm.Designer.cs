@@ -1,6 +1,6 @@
 ﻿namespace HMS.Forms
 {
-    partial class LoginForm
+    partial class RegisterForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
@@ -38,15 +38,15 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnLogin = new System.Windows.Forms.PictureBox();
-            this.lblLogin = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.PictureBox();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -63,22 +63,22 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblTitle.Location = new System.Drawing.Point(135, 84);
+            this.lblTitle.Location = new System.Drawing.Point(124, 86);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(59, 25);
+            this.lblTitle.Size = new System.Drawing.Size(81, 25);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Login";
+            this.lblTitle.Text = "Register";
             // 
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.lblSubtitle.Location = new System.Drawing.Point(85, 111);
+            this.lblSubtitle.Location = new System.Drawing.Point(94, 111);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(166, 21);
+            this.lblSubtitle.Size = new System.Drawing.Size(149, 21);
             this.lblSubtitle.TabIndex = 2;
-            this.lblSubtitle.Text = "Sign into your account";
+            this.lblSubtitle.Text = "Create your account";
             // 
             // pictureBox2
             // 
@@ -141,50 +141,50 @@
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
-            // btnLogin
+            // btnRegister
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnLogin.Location = new System.Drawing.Point(53, 246);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(234, 35);
-            this.btnLogin.TabIndex = 9;
-            this.btnLogin.TabStop = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLogin.ForeColor = System.Drawing.Color.White;
-            this.lblLogin.Location = new System.Drawing.Point(145, 253);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(47, 20);
-            this.lblLogin.TabIndex = 10;
-            this.lblLogin.Text = "Login";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.btnRegister.Location = new System.Drawing.Point(53, 246);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(234, 35);
+            this.btnRegister.TabIndex = 9;
+            this.btnRegister.TabStop = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
-            this.lblRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblRegister.Location = new System.Drawing.Point(83, 291);
+            this.lblRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.lblRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRegister.ForeColor = System.Drawing.Color.White;
+            this.lblRegister.Location = new System.Drawing.Point(145, 253);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(176, 21);
-            this.lblRegister.TabIndex = 11;
-            this.lblRegister.Text = "Don\'t have an account?";
+            this.lblRegister.Size = new System.Drawing.Size(64, 20);
+            this.lblRegister.TabIndex = 10;
+            this.lblRegister.Text = "Register";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
             // 
-            // LoginForm
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.lblLogin.Location = new System.Drawing.Point(73, 291);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(193, 21);
+            this.lblLogin.TabIndex = 11;
+            this.lblLogin.Text = "Already have an account?";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
+            // 
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(334, 332);
-            this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.lblRegister);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
@@ -196,15 +196,16 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "LoginForm";
+            this.Name = "RegisterForm";
             this.ShowIcon = false;
             this.Text = "Hospital Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRegister)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,8 +222,8 @@
         private TextBox txtPassword;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
-        private PictureBox btnLogin;
-        private Label lblLogin;
+        private PictureBox btnRegister;
         private Label lblRegister;
+        private Label lblLogin;
     }
 }

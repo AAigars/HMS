@@ -16,6 +16,9 @@ namespace HMS.Database
         [DbColumn("last_name")]
         public string? LastName { get; set; }
 
+        //[DbColumn("date_of_birth")]
+        //public DateTime? DateOfBirth { get; set; }
+
         [DbColumn("address")]
         public string? Address { get; set; }
 
