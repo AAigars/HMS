@@ -11,7 +11,7 @@ namespace HMS
 
         public static Forms.LoginForm? loginForm;
 
-        public static Database.User? user;
+        public static Database.UserModel? user;
 
         /// <summary>
         ///  The main entry point for the application.

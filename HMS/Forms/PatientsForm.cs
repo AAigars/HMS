@@ -32,7 +32,7 @@ namespace HMS.Forms
             table.CreateAction(Resources.Delete);
 
             // load patients
-            var patients = Program.databaseManager.ExecuteMappedQuery<Patient>("SELECT first_name, last_name, date_of_birth FROM Patient");
+            var patients = Patient.GetPatients();
 
             foreach (var patient in patients)
             {

@@ -199,6 +199,7 @@
             this.MaximizeBox = false;
             this.Name = "PatientsForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Hospital Management System";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientsForm_FormClosed);
             this.Load += new System.EventHandler(this.PatientsForm_Load);

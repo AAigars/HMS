@@ -31,13 +31,8 @@ namespace HMS.Forms
                 return;
             }
 
-            // set up prepared statement
-            var command = new SQLiteCommand("INSERT INTO User (username, password) VALUES (?, ?) RETURNING *", Program.databaseManager.GetConnection());
-            command.Parameters.Add(new SQLiteParameter("username", txtUsername.Text));
-            command.Parameters.Add(new SQLiteParameter("password", txtPassword.Text));
-
             // attempt to insert the new user into the table
-            var user = Program.databaseManager.ExecuteMappedQuery<User>(command).FirstOrDefault();
+            var user = User.RegisterUser(txtUsername.Text, txtPassword.Text);
 
             // check if the user is valid
             if (user != null)

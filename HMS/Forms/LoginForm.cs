@@ -19,13 +19,8 @@ namespace HMS.Forms
                 return;
             }
 
-            // set up prepared statement
-            var command = new SQLiteCommand("SELECT * FROM User WHERE username = ? AND password = ?", Program.databaseManager.GetConnection());
-            command.Parameters.Add(new SQLiteParameter("username", txtUsername.Text));
-            command.Parameters.Add(new SQLiteParameter("password", txtPassword.Text));
-
             // attempt to authenticate the user
-            var user = Program.databaseManager.ExecuteMappedQuery<User>(command).FirstOrDefault();
+            var user = User.AuthUser(txtUsername.Text, txtPassword.Text);
 
             // check if the user is valid
             if (user != null)

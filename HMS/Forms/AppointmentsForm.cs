@@ -32,7 +32,7 @@ namespace HMS.Forms
             table.CreateAction(Resources.Delete);
 
             // load appointments
-            var appointments = Program.databaseManager.ExecuteMappedQuery<Appointment>("SELECT Patient.first_name, Patient.last_name, User.first_name AS doctor, timestamp FROM Appointment INNER JOIN Patient ON Appointment.patient_id = Patient.id INNER JOIN User ON Appointment.doctor_id = User.id");
+            var appointments = Appointment.GetAppointments();
 
             foreach (var appointment in appointments)
             {
@@ -59,7 +59,9 @@ namespace HMS.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            isSwitching = true;
             new AddAppointmentForm().Show();
+            Close();
         }
 
         private void btnPatients_Click(object sender, EventArgs e)
