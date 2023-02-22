@@ -22,6 +22,11 @@
         private int width;
         private int height;
 
+        /// <summary>
+        /// Custom implementation of a table
+        /// </summary>
+        /// <param name="control">Main control of table</param>
+        /// <param name="height">Height of the headings/entries</param>
         public Table(Control control, int height = 40)
         {
             this.control = control;
@@ -32,6 +37,10 @@
             actions = new();
         }
 
+        /// <summary>
+        /// Creates the controls for displaying headers in the table
+        /// </summary>
+        /// <param name="headings">String array of all the headings</param>
         public void CreateHeader(string[] headings)
         {
             // calculate size of each heading
@@ -66,11 +75,19 @@
             offset += height;
         }
 
+        /// <summary>
+        /// Creates an action for the table entries
+        /// </summary>
+        /// <param name="image">Image to be used for the action</param>
         public void CreateAction(Image image)
         {
             actions.Add(new Action(image));
         }
 
+        /// <summary>
+        /// Creates an entry into the table
+        /// </summary>
+        /// <param name="entries"></param>
         public void CreateEntry(string?[] entries)
         {
             // check for size calculation
@@ -130,6 +147,9 @@
             offset += height;
         }
 
+        /// <summary>
+        /// Resets all of the internal offsets and clears any entries
+        /// </summary>
         public void Clear()
         {
             // reset offset
