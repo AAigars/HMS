@@ -7,10 +7,13 @@ namespace HMS.Forms
     public partial class PatientsForm : Form
     {
         private bool isSwitching = false;
+        private Table table;
+        private int page = 0;
 
         public PatientsForm()
         {
             InitializeComponent();
+            table = new Table(tblAppointments);
         }
 
         private void PatientsForm_Load(object sender, EventArgs e)
@@ -26,7 +29,6 @@ namespace HMS.Forms
             lblName.Text = Program.user.FirstName + " " + Program.user.LastName;
 
             // setup table
-            var table = new Table(tblAppointments);
             table.CreateHeader(new string[] { "First Name", "Last Name", "Date of Birth", "Actions" });
             table.CreateAction(Resources.View);
             table.CreateAction(Resources.Delete);
@@ -56,16 +58,68 @@ namespace HMS.Forms
                 Program.loginForm.Close();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAppointments_Click(object sender, EventArgs e)
         {
             isSwitching = true;
             new AppointmentsForm().Show();
             Close();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            // fetch data
+            page += 1;
+            var patients = Patient.GetPatients(5, page * 5);
+
+            // check if we got any data
+            if (patients.Length == 0)
+            {
+                page -= 1;
+                return;
+            }
+
+            // clear table data
+            table.Clear();
+
+            // insert data
+            foreach (var patient in patients)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        patient.FirstName,
+                        patient.LastName,
+                        patient.DateOfBirth
+                    }
+                );
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            // check if at end
+            if (page == 0)
+                return;
+
+            // clear table data
+            table.Clear();
+
+            // fetch data
+            page -= 1;
+            var patients = Patient.GetPatients(5, page * 5);
+
+            // insert data
+            foreach (var patient in patients)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        patient.FirstName,
+                        patient.LastName,
+                        patient.DateOfBirth
+                    }
+                );
+            }
         }
     }
 }

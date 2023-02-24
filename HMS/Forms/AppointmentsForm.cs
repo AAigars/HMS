@@ -7,10 +7,13 @@ namespace HMS.Forms
     public partial class AppointmentsForm : Form
     {
         private bool isSwitching = false;
+        private Table table;
+        private int page = 0;
 
         public AppointmentsForm()
         {
             InitializeComponent();
+            table = new Table(tblAppointments);
         }
 
         private void AppointmentsForm_Load(object sender, EventArgs e)
@@ -26,7 +29,6 @@ namespace HMS.Forms
             lblName.Text = Program.user.FirstName + " " + Program.user.LastName;
 
             // setup table
-            var table = new Table(tblAppointments);
             table.CreateHeader(new string[] { "First Name", "Last Name", "Doctor", "Timestamp", "Actions" });
             table.CreateAction(Resources.View);
             table.CreateAction(Resources.Delete);
@@ -69,6 +71,65 @@ namespace HMS.Forms
             isSwitching = true;
             new PatientsForm().Show();
             Close();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            // fetch data
+            page += 1;
+            var appointments = Appointment.GetAppointments(5, page * 5);
+
+            // check if we got any data
+            if (appointments.Length == 0)
+            {
+                page -= 1;
+                return;
+            }
+
+            // clear table data
+            table.Clear();
+
+            // insert data
+            foreach (var appointment in appointments)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        appointment.PatientFirstName,
+                        appointment.PatientLastName,
+                        appointment.DoctorFirstName,
+                        appointment.Timestamp
+                    }
+                );
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            // check if at end
+            if (page == 0)
+                return;
+
+            // clear table data
+            table.Clear();
+
+            // fetch data
+            page -= 1;
+            var appointments = Appointment.GetAppointments(5, page * 5);
+
+            // insert data
+            foreach (var appointment in appointments)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        appointment.PatientFirstName,
+                        appointment.PatientLastName,
+                        appointment.DoctorFirstName,
+                        appointment.Timestamp
+                    }
+                );
+            }
         }
     }
 }

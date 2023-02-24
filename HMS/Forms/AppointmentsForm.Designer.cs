@@ -40,6 +40,8 @@
             this.tblAppointments = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.Label();
+            this.btnPrevious = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -166,12 +168,40 @@
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.btnPrevious.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrevious.ForeColor = System.Drawing.Color.White;
+            this.btnPrevious.Location = new System.Drawing.Point(808, 311);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(38, 35);
+            this.btnPrevious.TabIndex = 26;
+            this.btnPrevious.Text = "<";
+            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
+            this.btnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(852, 311);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(38, 35);
+            this.btnNext.TabIndex = 25;
+            this.btnNext.Text = ">";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // AppointmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(901, 355);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.tblAppointments);
@@ -215,5 +245,7 @@
         private PictureBox tblAppointments;
         private PictureBox pictureBox6;
         private Label btnAdd;
+        private Label btnPrevious;
+        private Label btnNext;
     }
 }

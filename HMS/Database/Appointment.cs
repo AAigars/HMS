@@ -33,14 +33,20 @@ namespace HMS.Database
 
     public static class Appointment
     {
-        public static AppointmentModel[] GetAppointments()
+        public static AppointmentModel[] GetAppointments(int limit = 0, int offset = 0)
         {
             // prepare query
-            string query = 
+            string query =
                 "SELECT Patient.first_name, Patient.last_name, User.first_name AS doctor, timestamp, note " +
                 "FROM Appointment " +
                 "INNER JOIN Patient ON Appointment.patient_id = Patient.id " +
-                "INNER JOIN User ON Appointment.doctor_id = User.id";
+                "INNER JOIN User ON Appointment.doctor_id = User.id " +
+                "ORDER BY Appointment.id";
+
+            if (limit != 0)
+            {
+                query += " LIMIT " + limit + " OFFSET " + offset;
+            }
 
             // execute and return query
             return Program.databaseManager.ExecuteMappedQuery<AppointmentModel>(query);

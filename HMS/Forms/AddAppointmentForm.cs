@@ -11,6 +11,12 @@ namespace HMS.Forms
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
+            if (txtPatient.Text == string.Empty || txtDoctor.Text == string.Empty)
+            {
+                MessageBox.Show("Invalid patient or doctor has been selected!", Program.title);
+                return;
+            }
+
             // fetch patient and user ids.
             var patientName = txtPatient.Text.Split(' ');
             var patient = Patient.GetPatient(patientName[0], patientName[1]);

@@ -26,9 +26,14 @@ namespace HMS.Database
 
     public static class Patient
     {
-        public static PatientModel[] GetPatients()
+        public static PatientModel[] GetPatients(int limit = 0, int offset = 0)
         {
-            string query = "SELECT * FROM Patient";
+            string query = "SELECT * FROM Patient ORDER BY id";
+            if (limit != 0)
+            {
+                query += " LIMIT " + limit + " OFFSET " + offset;
+            }
+
             return Program.databaseManager.ExecuteMappedQuery<PatientModel>(query);
         }
 

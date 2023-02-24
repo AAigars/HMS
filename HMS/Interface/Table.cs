@@ -138,6 +138,9 @@
                 // assign to control
                 control.Controls.Add(pictureBox);
 
+                // store control
+                this.entries.Add(pictureBox);
+
                 // increment offset
                 actionOffset += 32;
 
@@ -161,10 +164,7 @@
                 var entry = entries[i];
 
                 // remove from control
-                control.Controls.Remove(entry);
-
-                // remove from list
-                entries.RemoveAt(i);
+                entry.Dispose();
             }
         }
     }
