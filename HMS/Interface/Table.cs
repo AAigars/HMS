@@ -3,10 +3,12 @@
     public class Action
     {
         public Image image;
+        public Action<object>? function;
 
-        public Action(Image image)
+        public Action(Image image, Action<object>? function)
         {
             this.image = image;
+            this.function = function;   
         }
     }
 
@@ -79,16 +81,16 @@
         /// Creates an action for the table entries
         /// </summary>
         /// <param name="image">Image to be used for the action</param>
-        public void CreateAction(Image image)
+        public void CreateAction(Image image, Action<object> function)
         {
-            actions.Add(new Action(image));
+            actions.Add(new Action(image, function));
         }
 
         /// <summary>
         /// Creates an entry into the table
         /// </summary>
         /// <param name="entries"></param>
-        public void CreateEntry(string?[] entries)
+        public void CreateEntry(string?[] entries, object? data = null)
         {
             // check for size calculation
             if (width == 0)
@@ -135,6 +137,15 @@
                 pictureBox.Size = new Size(32, height);
                 pictureBox.Location = new Point(actionOffset, offset);
 
+                // onclick
+                if (action.function != null)
+                {
+                    pictureBox.Click += new EventHandler(delegate (object sender, EventArgs e)
+                    {
+                        action.function(data);
+                    });
+                }
+
                 // assign to control
                 control.Controls.Add(pictureBox);
 
@@ -143,7 +154,6 @@
 
                 // increment offset
                 actionOffset += 32;
-
             }
 
             // increment offset

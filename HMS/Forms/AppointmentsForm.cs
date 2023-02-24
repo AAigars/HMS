@@ -16,6 +16,49 @@ namespace HMS.Forms
             table = new Table(tblAppointments);
         }
 
+        private void OnView(object data)
+        {
+            var appointment = (AppointmentModel)data;
+            MessageBox.Show(appointment.PatientFirstName + " " + appointment.PatientLastName + ": " + appointment.Note, Program.title);
+        }
+
+        private void OnDelete(object data)
+        {
+            var appointment = (AppointmentModel)data;
+            Appointment.DeleteAppointment(appointment);
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            var appointments = Appointment.GetAppointments(5, page * 5);
+
+            // check if we got any data
+            if (appointments.Length == 0)
+            {
+                page -= 1;
+                return;
+            }
+
+            // clear table data
+            table.Clear();
+
+            // insert data
+            foreach (var appointment in appointments)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        appointment.PatientFirstName,
+                        appointment.PatientLastName,
+                        appointment.DoctorFirstName,
+                        appointment.Timestamp
+                    }, 
+                    appointment
+                );
+            }
+        }
+
         private void AppointmentsForm_Load(object sender, EventArgs e)
         {
             // sanity check for user; although the form should never be loaded without user data
@@ -30,24 +73,11 @@ namespace HMS.Forms
 
             // setup table
             table.CreateHeader(new string[] { "First Name", "Last Name", "Doctor", "Timestamp", "Actions" });
-            table.CreateAction(Resources.View);
-            table.CreateAction(Resources.Delete);
+            table.CreateAction(Resources.View, OnView);
+            table.CreateAction(Resources.Delete, OnDelete);
 
             // load appointments
-            var appointments = Appointment.GetAppointments();
-
-            foreach (var appointment in appointments)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        appointment.PatientFirstName,
-                        appointment.PatientLastName,
-                        appointment.DoctorFirstName,
-                        appointment.Timestamp
-                    }
-                );
-            }
+            LoadData();
         }
 
         private void AppointmentsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -75,33 +105,9 @@ namespace HMS.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            // fetch data
+            // load data
             page += 1;
-            var appointments = Appointment.GetAppointments(5, page * 5);
-
-            // check if we got any data
-            if (appointments.Length == 0)
-            {
-                page -= 1;
-                return;
-            }
-
-            // clear table data
-            table.Clear();
-
-            // insert data
-            foreach (var appointment in appointments)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        appointment.PatientFirstName,
-                        appointment.PatientLastName,
-                        appointment.DoctorFirstName,
-                        appointment.Timestamp
-                    }
-                );
-            }
+            LoadData();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -110,26 +116,9 @@ namespace HMS.Forms
             if (page == 0)
                 return;
 
-            // clear table data
-            table.Clear();
-
-            // fetch data
+            // load data
             page -= 1;
-            var appointments = Appointment.GetAppointments(5, page * 5);
-
-            // insert data
-            foreach (var appointment in appointments)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        appointment.PatientFirstName,
-                        appointment.PatientLastName,
-                        appointment.DoctorFirstName,
-                        appointment.Timestamp
-                    }
-                );
-            }
+            LoadData();
         }
     }
 }

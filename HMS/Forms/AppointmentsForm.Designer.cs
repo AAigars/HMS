@@ -162,9 +162,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(12, 311);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(181, 35);
+            this.btnAdd.Size = new System.Drawing.Size(38, 35);
             this.btnAdd.TabIndex = 21;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "+";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 

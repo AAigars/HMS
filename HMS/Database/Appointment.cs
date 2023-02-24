@@ -37,7 +37,7 @@ namespace HMS.Database
         {
             // prepare query
             string query =
-                "SELECT Patient.first_name, Patient.last_name, User.first_name AS doctor, timestamp, note " +
+                "SELECT Patient.first_name, Patient.last_name, User.first_name AS doctor, * " +
                 "FROM Appointment " +
                 "INNER JOIN Patient ON Appointment.patient_id = Patient.id " +
                 "INNER JOIN User ON Appointment.doctor_id = User.id " +
@@ -52,7 +52,7 @@ namespace HMS.Database
             return Program.databaseManager.ExecuteMappedQuery<AppointmentModel>(query);
         }
 
-        public static void RemoveAppointment(AppointmentModel appointment)
+        public static void DeleteAppointment(AppointmentModel appointment)
         {
             // prepare query
             var command = new SQLiteCommand("DELETE FROM Appointment WHERE id = ?", Program.databaseManager.GetConnection());

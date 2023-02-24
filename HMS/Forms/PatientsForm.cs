@@ -16,6 +16,46 @@ namespace HMS.Forms
             table = new Table(tblAppointments);
         }
 
+        private void OnView(object data)
+        {
+            var patient = (PatientModel)data;
+        }
+
+        private void OnDelete(object data)
+        {
+            var patient = (PatientModel)data;
+        }
+
+        private void LoadData()
+        {
+            // load patients
+            var patients = Patient.GetPatients(5, page * 5);
+
+            // check if we got any data
+            if (patients.Length == 0)
+            {
+                page -= 1;
+                return;
+            }
+
+            // clear table data
+            table.Clear();
+
+            // insert data
+            foreach (var patient in patients)
+            {
+                table.CreateEntry(
+                    new string?[]
+                    {
+                        patient.FirstName,
+                        patient.LastName,
+                        patient.DateOfBirth
+                    },
+                    patient
+                );
+            }
+        }
+
         private void PatientsForm_Load(object sender, EventArgs e)
         {
             // sanity check for user; although the form should never be loaded without user data
@@ -30,23 +70,11 @@ namespace HMS.Forms
 
             // setup table
             table.CreateHeader(new string[] { "First Name", "Last Name", "Date of Birth", "Actions" });
-            table.CreateAction(Resources.View);
-            table.CreateAction(Resources.Delete);
+            table.CreateAction(Resources.View, OnView);
+            table.CreateAction(Resources.Delete, OnDelete);
 
             // load patients
-            var patients = Patient.GetPatients();
-
-            foreach (var patient in patients)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        patient.FirstName,
-                        patient.LastName,
-                        patient.DateOfBirth
-                    }
-                );
-            }
+            LoadData();
         }
 
         private void PatientsForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -69,30 +97,7 @@ namespace HMS.Forms
         {
             // fetch data
             page += 1;
-            var patients = Patient.GetPatients(5, page * 5);
-
-            // check if we got any data
-            if (patients.Length == 0)
-            {
-                page -= 1;
-                return;
-            }
-
-            // clear table data
-            table.Clear();
-
-            // insert data
-            foreach (var patient in patients)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        patient.FirstName,
-                        patient.LastName,
-                        patient.DateOfBirth
-                    }
-                );
-            }
+            LoadData();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -101,25 +106,9 @@ namespace HMS.Forms
             if (page == 0)
                 return;
 
-            // clear table data
-            table.Clear();
-
             // fetch data
             page -= 1;
-            var patients = Patient.GetPatients(5, page * 5);
-
-            // insert data
-            foreach (var patient in patients)
-            {
-                table.CreateEntry(
-                    new string?[]
-                    {
-                        patient.FirstName,
-                        patient.LastName,
-                        patient.DateOfBirth
-                    }
-                );
-            }
+            LoadData();
         }
     }
 }
