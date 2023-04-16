@@ -14,10 +14,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\AddMedicalHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\AddPrescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\AddAppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ViewPatient.cs">
+    <Compile Update="Forms\ViewPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\PatientsForm.cs">

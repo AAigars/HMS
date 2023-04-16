@@ -1,6 +1,6 @@
 ﻿namespace HMS.Forms
 {
-    partial class ViewPatient
+    partial class ViewPatientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatient));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatientForm));
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             lblName = new Label();
@@ -46,10 +46,10 @@
             label5 = new Label();
             lblAddress = new Label();
             label7 = new Label();
-            lblMedicalHistory = new Label();
             label6 = new Label();
-            lblPrescriptions = new Label();
             label9 = new Label();
+            lbxMedicalHistory = new ListBox();
+            lbxPrescriptions = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -196,7 +196,7 @@
             lblDateOfBirth.Location = new Point(145, 112);
             lblDateOfBirth.Name = "lblDateOfBirth";
             lblDateOfBirth.Padding = new Padding(5, 0, 0, 0);
-            lblDateOfBirth.Size = new Size(271, 33);
+            lblDateOfBirth.Size = new Size(177, 33);
             lblDateOfBirth.TabIndex = 19;
             lblDateOfBirth.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -208,7 +208,7 @@
             lblGender.Location = new Point(145, 162);
             lblGender.Name = "lblGender";
             lblGender.Padding = new Padding(5, 0, 0, 0);
-            lblGender.Size = new Size(271, 33);
+            lblGender.Size = new Size(177, 33);
             lblGender.TabIndex = 21;
             lblGender.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -232,7 +232,7 @@
             lblAddress.Location = new Point(145, 215);
             lblAddress.Name = "lblAddress";
             lblAddress.Padding = new Padding(5, 5, 0, 0);
-            lblAddress.Size = new Size(271, 119);
+            lblAddress.Size = new Size(177, 119);
             lblAddress.TabIndex = 23;
             // 
             // label7
@@ -247,39 +247,17 @@
             label7.TabIndex = 22;
             label7.Text = "Address";
             // 
-            // lblMedicalHistory
-            // 
-            lblMedicalHistory.BackColor = Color.White;
-            lblMedicalHistory.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblMedicalHistory.ForeColor = Color.FromArgb(110, 114, 117);
-            lblMedicalHistory.Location = new Point(573, 112);
-            lblMedicalHistory.Name = "lblMedicalHistory";
-            lblMedicalHistory.Padding = new Padding(5, 5, 0, 0);
-            lblMedicalHistory.Size = new Size(299, 101);
-            lblMedicalHistory.TabIndex = 25;
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.FromArgb(237, 242, 246);
             label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(110, 114, 117);
-            label6.Location = new Point(441, 118);
+            label6.Location = new Point(338, 110);
             label6.Name = "label6";
             label6.Size = new Size(126, 21);
             label6.TabIndex = 24;
             label6.Text = "Medical History";
-            // 
-            // lblPrescriptions
-            // 
-            lblPrescriptions.BackColor = Color.White;
-            lblPrescriptions.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPrescriptions.ForeColor = Color.FromArgb(110, 114, 117);
-            lblPrescriptions.Location = new Point(573, 225);
-            lblPrescriptions.Name = "lblPrescriptions";
-            lblPrescriptions.Padding = new Padding(5, 5, 0, 0);
-            lblPrescriptions.Size = new Size(299, 109);
-            lblPrescriptions.TabIndex = 27;
             // 
             // label9
             // 
@@ -287,11 +265,29 @@
             label9.BackColor = Color.FromArgb(237, 242, 246);
             label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.FromArgb(110, 114, 117);
-            label9.Location = new Point(441, 225);
+            label9.Location = new Point(614, 110);
             label9.Name = "label9";
             label9.Size = new Size(105, 21);
             label9.TabIndex = 26;
             label9.Text = "Prescriptions";
+            // 
+            // lbxMedicalHistory
+            // 
+            lbxMedicalHistory.FormattingEnabled = true;
+            lbxMedicalHistory.ItemHeight = 15;
+            lbxMedicalHistory.Location = new Point(338, 135);
+            lbxMedicalHistory.Name = "lbxMedicalHistory";
+            lbxMedicalHistory.Size = new Size(266, 199);
+            lbxMedicalHistory.TabIndex = 28;
+            // 
+            // lbxPrescriptions
+            // 
+            lbxPrescriptions.FormattingEnabled = true;
+            lbxPrescriptions.ItemHeight = 15;
+            lbxPrescriptions.Location = new Point(614, 135);
+            lbxPrescriptions.Name = "lbxPrescriptions";
+            lbxPrescriptions.Size = new Size(266, 199);
+            lbxPrescriptions.TabIndex = 29;
             // 
             // ViewPatient
             // 
@@ -299,9 +295,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(901, 355);
-            Controls.Add(lblPrescriptions);
+            Controls.Add(lbxPrescriptions);
+            Controls.Add(lbxMedicalHistory);
             Controls.Add(label9);
-            Controls.Add(lblMedicalHistory);
             Controls.Add(label6);
             Controls.Add(lblAddress);
             Controls.Add(label7);
@@ -358,9 +354,9 @@
         private Label label5;
         private Label lblAddress;
         private Label label7;
-        private Label lblMedicalHistory;
         private Label label6;
-        private Label lblPrescriptions;
         private Label label9;
+        private ListBox lbxMedicalHistory;
+        private ListBox lbxPrescriptions;
     }
 }

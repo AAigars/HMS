@@ -22,6 +22,12 @@ namespace HMS.Database
 
         [DbColumn("dosage")]
         public double Dosage { get; set; }
+
+        public override string ToString()
+        {
+            var medicine = Database.Medicine.GetMedicine(Medicine);
+            return (medicine != null ? medicine.Name : "Unknown") + " (" + Dosage + "mg)";
+        }
     }
 
     public static class Prescription
@@ -34,6 +40,30 @@ namespace HMS.Database
 
             // attempt to fetch prescriptions
             return Program.databaseManager.ExecuteMappedQuery<PrescriptionModel>(command);
+        }
+
+        public static PrescriptionModel? AddPrescription(PatientModel patient, long medicine, double dosage)
+        {
+            // set up prepared statement
+            var command = new SQLiteCommand("INSERT INTO Patient_Prescription (doctor_id, patient_id, timestamp, medicine, dosage) VALUES (?, ?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("doctor_id", Program.user.Id));
+            command.Parameters.Add(new SQLiteParameter("patient_id", patient.Id));
+            command.Parameters.Add(new SQLiteParameter("timestamp", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString()));
+            command.Parameters.Add(new SQLiteParameter("medicine", medicine));
+            command.Parameters.Add(new SQLiteParameter("dosage", dosage));
+
+            // attempt to insert the new appointment into the table
+            return Program.databaseManager.ExecuteMappedQuery<PrescriptionModel>(command).FirstOrDefault();
+        }
+
+        public static void DeletePrescription(PrescriptionModel prescription)
+        {
+            // prepare query
+            var command = new SQLiteCommand("DELETE FROM Patient_Prescription WHERE id = ?", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("id", prescription.Id));
+
+            // execute query
+            Program.databaseManager.ExecuteMappedQuery<PrescriptionModel>(command);
         }
     }
 }

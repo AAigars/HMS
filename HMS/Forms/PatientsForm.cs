@@ -20,7 +20,7 @@ namespace HMS.Forms
         {
             var patient = (PatientModel)data;
             
-            new ViewPatient(patient).Show();
+            new ViewPatientForm(patient).Show();
             isSwitching = true;
 
             Close();
