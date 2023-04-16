@@ -1,5 +1,4 @@
 ﻿using DbDataReaderMapper;
-using System.Collections;
 using System.Data.SQLite;
 
 namespace HMS.Database

@@ -19,6 +19,11 @@ namespace HMS.Forms
         private void OnView(object data)
         {
             var patient = (PatientModel)data;
+            
+            new ViewPatient(patient).Show();
+            isSwitching = true;
+
+            Close();
         }
 
         private void OnDelete(object data)
