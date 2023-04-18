@@ -19,7 +19,7 @@ namespace HMS.Forms
         private void OnView(object data)
         {
             var patient = (PatientModel)data;
-            
+
             new ViewPatientForm(patient).Show();
             isSwitching = true;
 
@@ -29,6 +29,10 @@ namespace HMS.Forms
         private void OnDelete(object data)
         {
             var patient = (PatientModel)data;
+            Patient.DeletePatient(patient);
+
+            page = 0;
+            LoadData();
         }
 
         private void LoadData()
@@ -114,6 +118,13 @@ namespace HMS.Forms
             // fetch data
             page -= 1;
             LoadData();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            isSwitching = true;
+            new AddPatientForm().Show();
+            Close();
         }
     }
 }

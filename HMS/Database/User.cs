@@ -48,6 +48,16 @@ namespace HMS.Database
             return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
         }
 
+        public static UserModel? GetUser(long id)
+        {
+            // set up prepared statement
+            var command = new SQLiteCommand("SELECT * FROM User WHERE id = ?", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("id", id));
+
+            // attempt to fetch user
+            return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
+        }
+
         public static UserModel? AuthUser(string username, string password)
         {
             // set up prepared statement
@@ -68,7 +78,6 @@ namespace HMS.Database
 
             // attempt to insert the new user into the table
             return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
-
         }
     }
 }

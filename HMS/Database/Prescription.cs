@@ -15,7 +15,7 @@ namespace HMS.Database
         public long PatientId { get; set; }
 
         [DbColumn("timestamp")]
-        public string? TimeStamp { get; set; }
+        public string? Timestamp { get; set; }
 
         [DbColumn("medicine")]
         public long Medicine { get; set; }

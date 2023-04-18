@@ -19,13 +19,17 @@ namespace HMS.Forms
         private void OnView(object data)
         {
             var appointment = (AppointmentModel)data;
-            MessageBox.Show(appointment.PatientFirstName + " " + appointment.PatientLastName + ": " + appointment.Note, Program.title);
+            MessageBox.Show(
+                "Patient: " + appointment.PatientFirstName + " " + appointment.PatientLastName + Environment.NewLine +
+                "Note: " + appointment.Note, Program.title);
         }
 
         private void OnDelete(object data)
         {
             var appointment = (AppointmentModel)data;
             Appointment.DeleteAppointment(appointment);
+
+            page = 0;
             LoadData();
         }
 

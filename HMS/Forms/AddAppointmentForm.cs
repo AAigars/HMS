@@ -19,10 +19,10 @@ namespace HMS.Forms
 
             // fetch patient and user ids.
             var patientName = txtPatient.Text.Split(' ');
-            var patient = Patient.GetPatient(patientName[0], patientName[1]);
+            var patient = patientName.Length > 1 ? Patient.GetPatient(patientName[0], patientName[1]) : null;
 
             var doctorName = txtDoctor.Text.Split(' ');
-            var doctor = User.GetUser(doctorName[0], doctorName[1]);
+            var doctor = doctorName.Length > 1 ? User.GetUser(doctorName[0], doctorName[1]) : null;
 
             // sanity check patient and doctor
             if (patient == null || doctor == null)
@@ -41,7 +41,6 @@ namespace HMS.Forms
             Appointment.AddAppointment(doctor, patient, txtTimestamp.Text, txtNote.Text);
 
             // todo: proper success/error dialog
-            new AppointmentsForm().Show();
             Close();
         }
 

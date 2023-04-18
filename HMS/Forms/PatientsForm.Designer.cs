@@ -29,206 +29,206 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientsForm));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAppointments = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.tblAppointments = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btnAdd = new System.Windows.Forms.Label();
-            this.btnNext = new System.Windows.Forms.Label();
-            this.btnPrevious = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAppointments)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.SuspendLayout();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            lblName = new Label();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            btnAppointments = new Label();
+            label3 = new Label();
+            pictureBox4 = new PictureBox();
+            tblAppointments = new PictureBox();
+            pictureBox6 = new PictureBox();
+            btnAdd = new Label();
+            btnNext = new Label();
+            btnPrevious = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tblAppointments).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(917, 3);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox3.Location = new Point(0, 41);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(917, 3);
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(902, 45);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(902, 45);
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblName.Location = new System.Drawing.Point(36, 11);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(90, 21);
-            this.lblName.TabIndex = 9;
-            this.lblName.Text = "Your Name";
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.FromArgb(237, 242, 246);
+            lblName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblName.ForeColor = Color.FromArgb(102, 126, 234);
+            lblName.Location = new Point(36, 11);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(90, 21);
+            lblName.TabIndex = 9;
+            lblName.Text = "Your Name";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(4, 5);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.label1.Location = new System.Drawing.Point(754, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Patients";
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(237, 242, 246);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(110, 114, 117);
+            label1.Location = new Point(754, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 21);
+            label1.TabIndex = 10;
+            label1.Text = "Patients";
             // 
             // btnAppointments
             // 
-            this.btnAppointments.AutoSize = true;
-            this.btnAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.btnAppointments.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.btnAppointments.Location = new System.Drawing.Point(633, 11);
-            this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.Size = new System.Drawing.Size(115, 21);
-            this.btnAppointments.TabIndex = 11;
-            this.btnAppointments.Text = "Appointments";
-            this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
+            btnAppointments.AutoSize = true;
+            btnAppointments.BackColor = Color.FromArgb(237, 242, 246);
+            btnAppointments.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAppointments.ForeColor = Color.FromArgb(110, 114, 117);
+            btnAppointments.Location = new Point(633, 11);
+            btnAppointments.Name = "btnAppointments";
+            btnAppointments.Size = new Size(115, 21);
+            btnAppointments.TabIndex = 11;
+            btnAppointments.Text = "Appointments";
+            btnAppointments.Click += btnAppointments_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.label3.Location = new System.Drawing.Point(828, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 21);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Admin";
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(237, 242, 246);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(110, 114, 117);
+            label3.Location = new Point(828, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 21);
+            label3.TabIndex = 12;
+            label3.Text = "Admin";
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.pictureBox4.Location = new System.Drawing.Point(751, 41);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(70, 3);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.BackColor = Color.FromArgb(102, 126, 234);
+            pictureBox4.Location = new Point(751, 41);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(70, 3);
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
             // 
             // tblAppointments
             // 
-            this.tblAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.tblAppointments.Location = new System.Drawing.Point(12, 59);
-            this.tblAppointments.Name = "tblAppointments";
-            this.tblAppointments.Size = new System.Drawing.Size(878, 243);
-            this.tblAppointments.TabIndex = 14;
-            this.tblAppointments.TabStop = false;
+            tblAppointments.BackColor = Color.FromArgb(237, 242, 246);
+            tblAppointments.Location = new Point(12, 59);
+            tblAppointments.Name = "tblAppointments";
+            tblAppointments.Size = new Size(878, 243);
+            tblAppointments.TabIndex = 14;
+            tblAppointments.TabStop = false;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 97);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(878, 3);
-            this.pictureBox6.TabIndex = 15;
-            this.pictureBox6.TabStop = false;
+            pictureBox6.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox6.Location = new Point(12, 97);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(878, 3);
+            pictureBox6.TabIndex = 15;
+            pictureBox6.TabStop = false;
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(12, 311);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(38, 35);
-            this.btnAdd.TabIndex = 22;
-            this.btnAdd.Text = "+";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            btnAdd.BackColor = Color.FromArgb(102, 126, 234);
+            btnAdd.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(12, 311);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(38, 35);
+            btnAdd.TabIndex = 22;
+            btnAdd.Text = "+";
+            btnAdd.TextAlign = ContentAlignment.MiddleCenter;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnNext
             // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(848, 311);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(38, 35);
-            this.btnNext.TabIndex = 23;
-            this.btnNext.Text = ">";
-            this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            btnNext.BackColor = Color.FromArgb(102, 126, 234);
+            btnNext.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNext.ForeColor = Color.White;
+            btnNext.Location = new Point(848, 311);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(38, 35);
+            btnNext.TabIndex = 23;
+            btnNext.Text = ">";
+            btnNext.TextAlign = ContentAlignment.MiddleCenter;
+            btnNext.Click += btnNext_Click;
             // 
             // btnPrevious
             // 
-            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnPrevious.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnPrevious.Location = new System.Drawing.Point(804, 311);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(38, 35);
-            this.btnPrevious.TabIndex = 24;
-            this.btnPrevious.Text = "<";
-            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            btnPrevious.BackColor = Color.FromArgb(102, 126, 234);
+            btnPrevious.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPrevious.ForeColor = Color.White;
+            btnPrevious.Location = new Point(804, 311);
+            btnPrevious.Name = "btnPrevious";
+            btnPrevious.Size = new Size(38, 35);
+            btnPrevious.TabIndex = 24;
+            btnPrevious.Text = "<";
+            btnPrevious.TextAlign = ContentAlignment.MiddleCenter;
+            btnPrevious.Click += btnPrevious_Click;
             // 
             // PatientsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(901, 355);
-            this.Controls.Add(this.btnPrevious);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.tblAppointments);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnAppointments);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "PatientsForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Hospital Management System";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientsForm_FormClosed);
-            this.Load += new System.EventHandler(this.PatientsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAppointments)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(901, 355);
+            Controls.Add(btnPrevious);
+            Controls.Add(btnNext);
+            Controls.Add(btnAdd);
+            Controls.Add(pictureBox6);
+            Controls.Add(tblAppointments);
+            Controls.Add(pictureBox4);
+            Controls.Add(label3);
+            Controls.Add(btnAppointments);
+            Controls.Add(label1);
+            Controls.Add(lblName);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "PatientsForm";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Hospital Management System";
+            FormClosed += PatientsForm_FormClosed;
+            Load += PatientsForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tblAppointments).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -50,6 +50,8 @@
             label9 = new Label();
             lbxMedicalHistory = new ListBox();
             lbxPrescriptions = new ListBox();
+            lblPhoneNumber = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -199,6 +201,7 @@
             lblDateOfBirth.Size = new Size(177, 33);
             lblDateOfBirth.TabIndex = 19;
             lblDateOfBirth.TextAlign = ContentAlignment.MiddleLeft;
+            lblDateOfBirth.Click += lblDateOfBirth_Click;
             // 
             // lblGender
             // 
@@ -211,6 +214,7 @@
             lblGender.Size = new Size(177, 33);
             lblGender.TabIndex = 21;
             lblGender.TextAlign = ContentAlignment.MiddleLeft;
+            lblGender.Click += lblGender_Click;
             // 
             // label5
             // 
@@ -229,11 +233,12 @@
             lblAddress.BackColor = Color.White;
             lblAddress.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAddress.ForeColor = Color.FromArgb(110, 114, 117);
-            lblAddress.Location = new Point(145, 215);
+            lblAddress.Location = new Point(145, 256);
             lblAddress.Name = "lblAddress";
             lblAddress.Padding = new Padding(5, 5, 0, 0);
-            lblAddress.Size = new Size(177, 119);
+            lblAddress.Size = new Size(177, 78);
             lblAddress.TabIndex = 23;
+            lblAddress.Click += lblAddress_Click;
             // 
             // label7
             // 
@@ -243,9 +248,9 @@
             label7.ForeColor = Color.FromArgb(110, 114, 117);
             label7.Location = new Point(21, 215);
             label7.Name = "label7";
-            label7.Size = new Size(70, 21);
+            label7.Size = new Size(120, 21);
             label7.TabIndex = 22;
-            label7.Text = "Address";
+            label7.Text = "Phone Number";
             // 
             // label6
             // 
@@ -289,12 +294,39 @@
             lbxPrescriptions.Size = new Size(266, 199);
             lbxPrescriptions.TabIndex = 29;
             // 
-            // ViewPatient
+            // lblPhoneNumber
+            // 
+            lblPhoneNumber.BackColor = Color.White;
+            lblPhoneNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPhoneNumber.ForeColor = Color.FromArgb(110, 114, 117);
+            lblPhoneNumber.Location = new Point(145, 209);
+            lblPhoneNumber.Name = "lblPhoneNumber";
+            lblPhoneNumber.Padding = new Padding(5, 0, 0, 0);
+            lblPhoneNumber.Size = new Size(177, 33);
+            lblPhoneNumber.TabIndex = 30;
+            lblPhoneNumber.TextAlign = ContentAlignment.MiddleLeft;
+            lblPhoneNumber.Click += lblPhoneNumber_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(237, 242, 246);
+            label8.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(110, 114, 117);
+            label8.Location = new Point(21, 256);
+            label8.Name = "label8";
+            label8.Size = new Size(70, 21);
+            label8.TabIndex = 31;
+            label8.Text = "Address";
+            // 
+            // ViewPatientForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(901, 355);
+            Controls.Add(label8);
+            Controls.Add(lblPhoneNumber);
             Controls.Add(lbxPrescriptions);
             Controls.Add(lbxMedicalHistory);
             Controls.Add(label9);
@@ -318,7 +350,7 @@
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "ViewPatient";
+            Name = "ViewPatientForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Hospital Management System";
@@ -358,5 +390,7 @@
         private Label label9;
         private ListBox lbxMedicalHistory;
         private ListBox lbxPrescriptions;
+        private Label lblPhoneNumber;
+        private Label label8;
     }
 }

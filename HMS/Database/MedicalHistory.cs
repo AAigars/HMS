@@ -1,5 +1,6 @@
 ﻿using DbDataReaderMapper;
 using System.Data.SQLite;
+using System.Text;
 
 namespace HMS.Database
 {
@@ -12,7 +13,7 @@ namespace HMS.Database
         public long PatientId { get; set; }
 
         [DbColumn("timestamp")]
-        public string? TimeStamp { get; set; }
+        public string? Timestamp { get; set; }
 
         [DbColumn("note")]
         public string? Note { get; set; }

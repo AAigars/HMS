@@ -47,5 +47,44 @@ namespace HMS.Database
             // attempt to fetch user
             return Program.databaseManager.ExecuteMappedQuery<PatientModel>(command).FirstOrDefault();
         }
+
+        public static PatientModel? UpdatePatient(PatientModel patient)
+        {
+            // set up prepared statement
+            var command = new SQLiteCommand("UPDATE Patient SET first_name = @first_name, last_name = @last_name, date_of_birth = @date_of_birth, address = @address, phone_number = @phone_number WHERE id = @id", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("@id", patient.Id));
+            command.Parameters.Add(new SQLiteParameter("@first_name", patient.FirstName));
+            command.Parameters.Add(new SQLiteParameter("@last_name", patient.LastName));
+            command.Parameters.Add(new SQLiteParameter("@date_of_birth", patient.DateOfBirth));
+            command.Parameters.Add(new SQLiteParameter("@address", patient.Address));
+            command.Parameters.Add(new SQLiteParameter("@phone_number", patient.PhoneNumber));
+
+            // attempt to update patient data
+            return Program.databaseManager.ExecuteMappedQuery<PatientModel>(command).FirstOrDefault();
+        }
+
+        public static PatientModel? AddPatient(string firstName, string lastName, string dateOfBirth, string address, string phoneNumber)
+        {
+            // set up prepared statement
+            var command = new SQLiteCommand("INSERT INTO Patient (first_name, last_name, date_of_birth, address, phone_number) VALUES (?, ?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("first_name", firstName));
+            command.Parameters.Add(new SQLiteParameter("last_name", lastName));
+            command.Parameters.Add(new SQLiteParameter("date_of_birth", dateOfBirth));
+            command.Parameters.Add(new SQLiteParameter("address", address));
+            command.Parameters.Add(new SQLiteParameter("phone_number", phoneNumber));
+
+            // attempt to insert the new patient into the table
+            return Program.databaseManager.ExecuteMappedQuery<PatientModel>(command).FirstOrDefault();
+        }
+
+        public static void DeletePatient(PatientModel patient)
+        {
+            // prepare query
+            var command = new SQLiteCommand("DELETE FROM Patient WHERE id = ?", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("id", patient.Id));
+
+            // execute query
+            Program.databaseManager.ExecuteMappedQuery<PatientModel>(command);
+        }
     }
 }
