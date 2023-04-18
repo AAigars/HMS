@@ -1,6 +1,6 @@
 namespace HMS
 {
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// Static variables.

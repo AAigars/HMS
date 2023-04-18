@@ -108,7 +108,13 @@ namespace HMS.Forms
             var history = lbxMedicalHistory.Items[selectedIndex] as MedicalHistoryModel;
             if (history == null) return;
 
-            MessageBox.Show("Note: " + history.Note + Environment.NewLine + "Timestamp: " + history.Timestamp, Program.title);
+            var doctor = User.GetUser(history.DoctorId);
+            if (doctor == null) return;
+
+            MessageBox.Show(
+                "Note: " + history.Note + Environment.NewLine +
+                "Doctor: " + doctor.FirstName + " " + doctor.LastName + Environment.NewLine +
+                "Timestamp: " + history.Timestamp, Program.title);
         }
 
         private void DeletePrescription_MouseDown(object? sender, MouseEventArgs e)
@@ -188,7 +194,7 @@ namespace HMS.Forms
             // set data
             lblPatient.Text = patient.FirstName + " " + patient.LastName;
             lblDateOfBirth.Text = patient.DateOfBirth;
-            lblGender.Text = "Male";
+            lblGender.Text = patient.Gender;
             lblPhoneNumber.Text = patient.PhoneNumber;
             lblAddress.Text = string.Join("\n", patient.Address.Split(","));
 
@@ -239,9 +245,12 @@ namespace HMS.Forms
 
         private void lblGender_Click(object sender, EventArgs e)
         {
-            var input = Interaction.InputBox("To update this field; please input the new value.", Program.title, "Male");
+            var input = Interaction.InputBox("To update this field; please input the new value.", Program.title, patient.Gender);
             if (input.Length <= 0) return;
 
+            patient.Gender = input;
+
+            Patient.UpdatePatient(patient);
             PatientsForm_Load(this, null);
         }
 
@@ -265,6 +274,19 @@ namespace HMS.Forms
 
             Patient.UpdatePatient(patient);
             PatientsForm_Load(this, null);
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            if (Program.user.Role < 4)
+            {
+                MessageBox.Show("You do not have the correct role to access this menu.", Program.title);
+                return;
+            }
+
+            isSwitching = true;
+            new AdminForm().Show();
+            Close();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace HMS.Forms
 {
-    partial class AppointmentsForm
+    partial class AdminForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppointmentsForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             lblName = new Label();
             pictureBox1 = new PictureBox();
             btnPatients = new Label();
-            label2 = new Label();
-            btnAdmin = new Label();
+            btnAppointments = new Label();
+            label3 = new Label();
             pictureBox4 = new PictureBox();
             tblAppointments = new PictureBox();
             pictureBox6 = new PictureBox();
-            btnAdd = new Label();
-            btnPrevious = new Label();
             btnNext = new Label();
+            btnPrevious = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -104,37 +103,37 @@
             btnPatients.Text = "Patients";
             btnPatients.Click += btnPatients_Click;
             // 
-            // label2
+            // btnAppointments
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(237, 242, 246);
-            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(110, 114, 117);
-            label2.Location = new Point(633, 11);
-            label2.Name = "label2";
-            label2.Size = new Size(115, 21);
-            label2.TabIndex = 11;
-            label2.Text = "Appointments";
+            btnAppointments.AutoSize = true;
+            btnAppointments.BackColor = Color.FromArgb(237, 242, 246);
+            btnAppointments.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAppointments.ForeColor = Color.FromArgb(110, 114, 117);
+            btnAppointments.Location = new Point(633, 11);
+            btnAppointments.Name = "btnAppointments";
+            btnAppointments.Size = new Size(115, 21);
+            btnAppointments.TabIndex = 11;
+            btnAppointments.Text = "Appointments";
+            btnAppointments.Click += btnAppointments_Click;
             // 
-            // btnAdmin
+            // label3
             // 
-            btnAdmin.AutoSize = true;
-            btnAdmin.BackColor = Color.FromArgb(237, 242, 246);
-            btnAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdmin.ForeColor = Color.FromArgb(110, 114, 117);
-            btnAdmin.Location = new Point(828, 11);
-            btnAdmin.Name = "btnAdmin";
-            btnAdmin.Size = new Size(58, 21);
-            btnAdmin.TabIndex = 12;
-            btnAdmin.Text = "Admin";
-            btnAdmin.Click += btnAdmin_Click;
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(237, 242, 246);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(110, 114, 117);
+            label3.Location = new Point(828, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 21);
+            label3.TabIndex = 12;
+            label3.Text = "Admin";
             // 
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.FromArgb(102, 126, 234);
-            pictureBox4.Location = new Point(625, 41);
+            pictureBox4.Location = new Point(821, 41);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(130, 3);
+            pictureBox4.Size = new Size(70, 3);
             pictureBox4.TabIndex = 13;
             pictureBox4.TabStop = false;
             // 
@@ -156,46 +155,33 @@
             pictureBox6.TabIndex = 15;
             pictureBox6.TabStop = false;
             // 
-            // btnAdd
+            // btnNext
             // 
-            btnAdd.BackColor = Color.FromArgb(102, 126, 234);
-            btnAdd.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(12, 311);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(38, 35);
-            btnAdd.TabIndex = 21;
-            btnAdd.Text = "+";
-            btnAdd.TextAlign = ContentAlignment.MiddleCenter;
-            btnAdd.Click += btnAdd_Click;
+            btnNext.BackColor = Color.FromArgb(102, 126, 234);
+            btnNext.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNext.ForeColor = Color.White;
+            btnNext.Location = new Point(848, 311);
+            btnNext.Name = "btnNext";
+            btnNext.Size = new Size(38, 35);
+            btnNext.TabIndex = 23;
+            btnNext.Text = ">";
+            btnNext.TextAlign = ContentAlignment.MiddleCenter;
+            btnNext.Click += btnNext_Click;
             // 
             // btnPrevious
             // 
             btnPrevious.BackColor = Color.FromArgb(102, 126, 234);
             btnPrevious.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrevious.ForeColor = Color.White;
-            btnPrevious.Location = new Point(808, 311);
+            btnPrevious.Location = new Point(804, 311);
             btnPrevious.Name = "btnPrevious";
             btnPrevious.Size = new Size(38, 35);
-            btnPrevious.TabIndex = 26;
+            btnPrevious.TabIndex = 24;
             btnPrevious.Text = "<";
             btnPrevious.TextAlign = ContentAlignment.MiddleCenter;
             btnPrevious.Click += btnPrevious_Click;
             // 
-            // btnNext
-            // 
-            btnNext.BackColor = Color.FromArgb(102, 126, 234);
-            btnNext.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(852, 311);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(38, 35);
-            btnNext.TabIndex = 25;
-            btnNext.Text = ">";
-            btnNext.TextAlign = ContentAlignment.MiddleCenter;
-            btnNext.Click += btnNext_Click;
-            // 
-            // AppointmentsForm
+            // AdminForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -203,12 +189,11 @@
             ClientSize = new Size(901, 355);
             Controls.Add(btnPrevious);
             Controls.Add(btnNext);
-            Controls.Add(btnAdd);
             Controls.Add(pictureBox6);
             Controls.Add(tblAppointments);
             Controls.Add(pictureBox4);
-            Controls.Add(btnAdmin);
-            Controls.Add(label2);
+            Controls.Add(label3);
+            Controls.Add(btnAppointments);
             Controls.Add(btnPatients);
             Controls.Add(lblName);
             Controls.Add(pictureBox1);
@@ -216,12 +201,12 @@
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "AppointmentsForm";
+            Name = "AdminForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Hospital Management System";
-            FormClosed += AppointmentsForm_FormClosed;
-            Load += AppointmentsForm_Load;
+            FormClosed += AdminForm_FormClosed;
+            Load += AdminForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -239,13 +224,12 @@
         private Label lblName;
         private PictureBox pictureBox1;
         private Label btnPatients;
-        private Label label2;
-        private Label btnAdmin;
+        private Label btnAppointments;
+        private Label label3;
         private PictureBox pictureBox4;
         private PictureBox tblAppointments;
         private PictureBox pictureBox6;
-        private Label btnAdd;
-        private Label btnPrevious;
         private Label btnNext;
+        private Label btnPrevious;
     }
 }

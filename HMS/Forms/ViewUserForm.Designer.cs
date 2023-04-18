@@ -1,6 +1,6 @@
 ﻿namespace HMS.Forms
 {
-    partial class ViewPatientForm
+    partial class ViewUserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatientForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUserForm));
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             lblName = new Label();
@@ -39,19 +39,23 @@
             pictureBox4 = new PictureBox();
             tblAppointments = new PictureBox();
             pictureBox6 = new PictureBox();
-            lblPatient = new Label();
+            lblUser = new Label();
             label2 = new Label();
             lblDateOfBirth = new Label();
             lblGender = new Label();
             label5 = new Label();
             lblAddress = new Label();
             label7 = new Label();
-            label6 = new Label();
-            label9 = new Label();
-            lbxMedicalHistory = new ListBox();
-            lbxPrescriptions = new ListBox();
             lblPhoneNumber = new Label();
             label8 = new Label();
+            lblRole = new Label();
+            label4 = new Label();
+            lblPassword = new Label();
+            label9 = new Label();
+            lblUsername = new Label();
+            label11 = new Label();
+            lblDepartment = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -143,7 +147,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.FromArgb(102, 126, 234);
-            pictureBox4.Location = new Point(751, 41);
+            pictureBox4.Location = new Point(821, 41);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(70, 3);
             pictureBox4.TabIndex = 13;
@@ -167,17 +171,17 @@
             pictureBox6.TabIndex = 15;
             pictureBox6.TabStop = false;
             // 
-            // lblPatient
+            // lblUser
             // 
-            lblPatient.AutoSize = true;
-            lblPatient.BackColor = Color.FromArgb(237, 242, 246);
-            lblPatient.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPatient.ForeColor = Color.FromArgb(110, 114, 117);
-            lblPatient.Location = new Point(21, 68);
-            lblPatient.Name = "lblPatient";
-            lblPatient.Size = new Size(108, 21);
-            lblPatient.TabIndex = 16;
-            lblPatient.Text = "Patient Name";
+            lblUser.AutoSize = true;
+            lblUser.BackColor = Color.FromArgb(237, 242, 246);
+            lblUser.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblUser.ForeColor = Color.FromArgb(110, 114, 117);
+            lblUser.Location = new Point(21, 68);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(90, 21);
+            lblUser.TabIndex = 16;
+            lblUser.Text = "User Name";
             // 
             // label2
             // 
@@ -253,50 +257,6 @@
             label7.TabIndex = 22;
             label7.Text = "Phone Number";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(237, 242, 246);
-            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(110, 114, 117);
-            label6.Location = new Point(338, 110);
-            label6.Name = "label6";
-            label6.Size = new Size(126, 21);
-            label6.TabIndex = 24;
-            label6.Text = "Medical History";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(237, 242, 246);
-            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(110, 114, 117);
-            label9.Location = new Point(614, 110);
-            label9.Name = "label9";
-            label9.Size = new Size(105, 21);
-            label9.TabIndex = 26;
-            label9.Text = "Prescriptions";
-            // 
-            // lbxMedicalHistory
-            // 
-            lbxMedicalHistory.BorderStyle = BorderStyle.None;
-            lbxMedicalHistory.FormattingEnabled = true;
-            lbxMedicalHistory.ItemHeight = 15;
-            lbxMedicalHistory.Location = new Point(338, 135);
-            lbxMedicalHistory.Name = "lbxMedicalHistory";
-            lbxMedicalHistory.Size = new Size(266, 195);
-            lbxMedicalHistory.TabIndex = 28;
-            // 
-            // lbxPrescriptions
-            // 
-            lbxPrescriptions.BorderStyle = BorderStyle.None;
-            lbxPrescriptions.FormattingEnabled = true;
-            lbxPrescriptions.ItemHeight = 15;
-            lbxPrescriptions.Location = new Point(614, 135);
-            lbxPrescriptions.Name = "lbxPrescriptions";
-            lbxPrescriptions.Size = new Size(266, 195);
-            lbxPrescriptions.TabIndex = 29;
-            // 
             // lblPhoneNumber
             // 
             lblPhoneNumber.BackColor = Color.White;
@@ -322,25 +282,127 @@
             label8.TabIndex = 31;
             label8.Text = "Address";
             // 
-            // ViewPatientForm
+            // lblRole
+            // 
+            lblRole.BackColor = Color.White;
+            lblRole.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRole.ForeColor = Color.FromArgb(110, 114, 117);
+            lblRole.Location = new Point(463, 192);
+            lblRole.Name = "lblRole";
+            lblRole.Padding = new Padding(5, 0, 0, 0);
+            lblRole.Size = new Size(177, 33);
+            lblRole.TabIndex = 37;
+            lblRole.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(237, 242, 246);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(110, 114, 117);
+            label4.Location = new Point(339, 198);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 21);
+            label4.TabIndex = 36;
+            label4.Text = "Role";
+            // 
+            // lblPassword
+            // 
+            lblPassword.BackColor = Color.FromArgb(102, 126, 234);
+            lblPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPassword.ForeColor = Color.White;
+            lblPassword.Location = new Point(463, 152);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Padding = new Padding(5, 0, 0, 0);
+            lblPassword.Size = new Size(177, 33);
+            lblPassword.TabIndex = 35;
+            lblPassword.Text = "Reset Password";
+            lblPassword.TextAlign = ContentAlignment.MiddleCenter;
+            lblPassword.Click += lblPassword_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(237, 242, 246);
+            label9.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(110, 114, 117);
+            label9.Location = new Point(339, 158);
+            label9.Name = "label9";
+            label9.Size = new Size(79, 21);
+            label9.TabIndex = 34;
+            label9.Text = "Password";
+            // 
+            // lblUsername
+            // 
+            lblUsername.BackColor = Color.White;
+            lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.ForeColor = Color.FromArgb(110, 114, 117);
+            lblUsername.Location = new Point(463, 112);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Padding = new Padding(5, 0, 0, 0);
+            lblUsername.Size = new Size(177, 33);
+            lblUsername.TabIndex = 33;
+            lblUsername.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.FromArgb(237, 242, 246);
+            label11.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(110, 114, 117);
+            label11.Location = new Point(339, 118);
+            label11.Name = "label11";
+            label11.Size = new Size(83, 21);
+            label11.TabIndex = 32;
+            label11.Text = "Username";
+            // 
+            // lblDepartment
+            // 
+            lblDepartment.BackColor = Color.White;
+            lblDepartment.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDepartment.ForeColor = Color.FromArgb(110, 114, 117);
+            lblDepartment.Location = new Point(463, 232);
+            lblDepartment.Name = "lblDepartment";
+            lblDepartment.Padding = new Padding(5, 0, 0, 0);
+            lblDepartment.Size = new Size(177, 33);
+            lblDepartment.TabIndex = 39;
+            lblDepartment.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(237, 242, 246);
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(110, 114, 117);
+            label6.Location = new Point(339, 238);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 21);
+            label6.TabIndex = 38;
+            label6.Text = "Department";
+            // 
+            // ViewUserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(901, 355);
+            Controls.Add(lblDepartment);
+            Controls.Add(label6);
+            Controls.Add(lblRole);
+            Controls.Add(label4);
+            Controls.Add(lblPassword);
+            Controls.Add(label9);
+            Controls.Add(lblUsername);
+            Controls.Add(label11);
             Controls.Add(label8);
             Controls.Add(lblPhoneNumber);
-            Controls.Add(lbxPrescriptions);
-            Controls.Add(lbxMedicalHistory);
-            Controls.Add(label9);
-            Controls.Add(label6);
             Controls.Add(lblAddress);
             Controls.Add(label7);
             Controls.Add(lblGender);
             Controls.Add(label5);
             Controls.Add(lblDateOfBirth);
             Controls.Add(label2);
-            Controls.Add(lblPatient);
+            Controls.Add(lblUser);
             Controls.Add(pictureBox6);
             Controls.Add(tblAppointments);
             Controls.Add(pictureBox4);
@@ -353,12 +415,12 @@
             Controls.Add(pictureBox2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "ViewPatientForm";
+            Name = "ViewUserForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterParent;
             Text = "Hospital Management System";
-            FormClosed += PatientsForm_FormClosed;
-            Load += PatientsForm_Load;
+            FormClosed += UserForm_FormClosed;
+            Load += UserForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -381,18 +443,22 @@
         private PictureBox pictureBox4;
         private PictureBox tblAppointments;
         private PictureBox pictureBox6;
-        private Label lblPatient;
+        private Label lblUser;
         private Label label2;
         private Label lblDateOfBirth;
         private Label lblGender;
         private Label label5;
         private Label lblAddress;
         private Label label7;
-        private Label label6;
-        private Label label9;
-        private ListBox lbxMedicalHistory;
-        private ListBox lbxPrescriptions;
         private Label lblPhoneNumber;
         private Label label8;
+        private Label lblRole;
+        private Label label4;
+        private Label lblPassword;
+        private Label label9;
+        private Label lblUsername;
+        private Label label11;
+        private Label lblDepartment;
+        private Label label6;
     }
 }

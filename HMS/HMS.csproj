@@ -26,6 +26,12 @@
     <Compile Update="Forms\AddAppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ViewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ViewPatientForm.cs">
       <SubType>Form</SubType>
     </Compile>

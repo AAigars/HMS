@@ -17,18 +17,44 @@ namespace HMS.Database
         [DbColumn("last_name")]
         public string? LastName { get; set; }
 
+        [DbColumn("date_of_birth")]
+        public string? DateOfBirth { get; set; }
+
+        [DbColumn("gender")]
+        public string? Gender { get; set; }
+
         [DbColumn("address")]
         public string? Address { get; set; }
 
         [DbColumn("phone_number")]
-        public long PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         [DbColumn("role")]
         public long Role { get; set; }
+
+        [DbColumn("username")]
+        public string Username { get; set; }
     }
 
     public static class User
     {
+        public static UserModel[] GetUsers(int role = 0, int limit = 0, int offset = 0)
+        {
+            string query = "SELECT * FROM User ORDER BY id";
+
+            if (limit != 0)
+            {
+                query += " LIMIT " + limit + " OFFSET " + offset;
+            }
+
+            if (role != 0)
+            {
+                query += " WHERE role = " + role;
+            }
+
+            return Program.databaseManager.ExecuteMappedQuery<UserModel>(query);
+        }
+
         public static UserModel[] GetUsers(int role = 0)
         {
             string query = "SELECT * FROM User";
@@ -77,6 +103,42 @@ namespace HMS.Database
             command.Parameters.Add(new SQLiteParameter("password", password));
 
             // attempt to insert the new user into the table
+            return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
+        }
+
+        public static void DeleteUser(UserModel user)
+        {
+            // prepare query
+            var command = new SQLiteCommand("DELETE FROM User WHERE id = ?", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("id", user.Id));
+
+            // execute query
+            Program.databaseManager.ExecuteMappedQuery<UserModel>(command);
+        }
+
+        public static UserModel? UpdateUser(UserModel user)
+        {
+            // set up prepared statement
+            var command = new SQLiteCommand("UPDATE User SET first_name = @first_name, last_name = @last_name, date_of_birth = @date_of_birth, gender = @gender, address = @address, phone_number = @phone_number WHERE id = @id", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("@id", user.Id));
+            command.Parameters.Add(new SQLiteParameter("@first_name", user.FirstName));
+            command.Parameters.Add(new SQLiteParameter("@last_name", user.LastName));
+            command.Parameters.Add(new SQLiteParameter("@date_of_birth", user.DateOfBirth));
+            command.Parameters.Add(new SQLiteParameter("@gender", user.Gender));
+            command.Parameters.Add(new SQLiteParameter("@address", user.Address));
+            command.Parameters.Add(new SQLiteParameter("@phone_number", user.PhoneNumber));
+
+            // attempt to update user data
+            return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
+        }
+
+        public static UserModel? ResetPassword(UserModel user, string password = "password123")
+        {
+            var command = new SQLiteCommand("UPDATE User SET password = @password WHERE id = @id", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("@id", user.Id));
+            command.Parameters.Add(new SQLiteParameter("@password", password));
+
+            // attempt to update user data
             return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
         }
     }

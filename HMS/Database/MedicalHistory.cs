@@ -1,6 +1,5 @@
 ﻿using DbDataReaderMapper;
 using System.Data.SQLite;
-using System.Text;
 
 namespace HMS.Database
 {
@@ -8,6 +7,9 @@ namespace HMS.Database
     {
         [DbColumn("id")]
         public long Id { get; set; }
+
+        [DbColumn("doctor_id")]
+        public long DoctorId { get; set; }
 
         [DbColumn("patient_id")]
         public long PatientId { get; set; }
@@ -18,7 +20,7 @@ namespace HMS.Database
         [DbColumn("note")]
         public string? Note { get; set; }
 
-        public override string ToString()
+        public override string? ToString()
         {
             return Note;
         }
@@ -39,7 +41,8 @@ namespace HMS.Database
         public static MedicalHistoryModel? AddMedicalHistory(PatientModel patient, string note)
         {
             // set up prepared statement
-            var command = new SQLiteCommand("INSERT INTO Patient_Medical (patient_id, timestamp, note) VALUES (?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            var command = new SQLiteCommand("INSERT INTO Patient_Medical (patient_id, doctor_id, timestamp, note) VALUES (?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("doctor_id", Program.user.Id));           
             command.Parameters.Add(new SQLiteParameter("patient_id", patient.Id));
             command.Parameters.Add(new SQLiteParameter("timestamp", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString()));
             command.Parameters.Add(new SQLiteParameter("note", note));

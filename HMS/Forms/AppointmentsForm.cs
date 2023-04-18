@@ -57,7 +57,7 @@ namespace HMS.Forms
                         appointment.PatientLastName,
                         appointment.DoctorFirstName,
                         appointment.Timestamp
-                    }, 
+                    },
                     appointment
                 );
             }
@@ -123,6 +123,19 @@ namespace HMS.Forms
             // load data
             page -= 1;
             LoadData();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            if (Program.user.Role < 4)
+            {
+                MessageBox.Show("You do not have the correct role to access this menu.", Program.title);
+                return;
+            }
+
+            isSwitching = true;
+            new AdminForm().Show();
+            Close();
         }
     }
 }

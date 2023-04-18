@@ -10,12 +10,12 @@ namespace HMS.Database
         /// <summary>
         /// Establishes a connection with the sql database
         /// </summary>
-        public Manager()
+        public Manager(string source = "hms.db")
         {
             // construct connection string
             var builder = new SQLiteConnectionStringBuilder()
             {
-                DataSource = "hms.db"
+                DataSource = source
             };
 
             // establish connection

@@ -35,7 +35,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             btnAppointments = new Label();
-            label3 = new Label();
+            btnAdmin = new Label();
             pictureBox4 = new PictureBox();
             tblAppointments = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -116,17 +116,18 @@
             btnAppointments.Text = "Appointments";
             btnAppointments.Click += btnAppointments_Click;
             // 
-            // label3
+            // btnAdmin
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(237, 242, 246);
-            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(110, 114, 117);
-            label3.Location = new Point(828, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 21);
-            label3.TabIndex = 12;
-            label3.Text = "Admin";
+            btnAdmin.AutoSize = true;
+            btnAdmin.BackColor = Color.FromArgb(237, 242, 246);
+            btnAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdmin.ForeColor = Color.FromArgb(110, 114, 117);
+            btnAdmin.Location = new Point(828, 11);
+            btnAdmin.Name = "btnAdmin";
+            btnAdmin.Size = new Size(58, 21);
+            btnAdmin.TabIndex = 12;
+            btnAdmin.Text = "Admin";
+            btnAdmin.Click += btnAdmin_Click;
             // 
             // pictureBox4
             // 
@@ -206,7 +207,7 @@
             Controls.Add(pictureBox6);
             Controls.Add(tblAppointments);
             Controls.Add(pictureBox4);
-            Controls.Add(label3);
+            Controls.Add(btnAdmin);
             Controls.Add(btnAppointments);
             Controls.Add(label1);
             Controls.Add(lblName);
@@ -239,7 +240,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Label btnAppointments;
-        private Label label3;
+        private Label btnAdmin;
         private PictureBox pictureBox4;
         private PictureBox tblAppointments;
         private PictureBox pictureBox6;

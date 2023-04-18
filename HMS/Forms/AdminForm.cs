@@ -4,13 +4,13 @@ using HMS.Properties;
 
 namespace HMS.Forms
 {
-    public partial class PatientsForm : Form
+    public partial class AdminForm : Form
     {
         private bool isSwitching = false;
         private Table table;
         private int page = 0;
 
-        public PatientsForm()
+        public AdminForm()
         {
             InitializeComponent();
             table = new Table(tblAppointments);
@@ -18,9 +18,9 @@ namespace HMS.Forms
 
         private void OnView(object data)
         {
-            var patient = (PatientModel)data;
+            var user = (UserModel)data;
 
-            new ViewPatientForm(patient).Show();
+            new ViewUserForm(user).Show();
             isSwitching = true;
 
             Close();
@@ -28,8 +28,8 @@ namespace HMS.Forms
 
         private void OnDelete(object data)
         {
-            var patient = (PatientModel)data;
-            Patient.DeletePatient(patient);
+            var user = (UserModel)data;
+            User.DeleteUser(user);
 
             page = 0;
             LoadData();
@@ -38,10 +38,10 @@ namespace HMS.Forms
         private void LoadData()
         {
             // load patients
-            var patients = Patient.GetPatients(5, page * 5);
+            var users = User.GetUsers(0, 5, page * 5);
 
             // check if we got any data
-            if (patients.Length == 0)
+            if (users.Length == 0)
             {
                 page -= 1;
                 return;
@@ -51,21 +51,21 @@ namespace HMS.Forms
             table.Clear();
 
             // insert data
-            foreach (var patient in patients)
+            foreach (var user in users)
             {
                 table.CreateEntry(
                     new string?[]
                     {
-                        patient.FirstName,
-                        patient.LastName,
-                        patient.DateOfBirth
+                        user.FirstName,
+                        user.LastName,
+                        user.DateOfBirth
                     },
-                    patient
+                    user
                 );
             }
         }
 
-        private void PatientsForm_Load(object sender, EventArgs e)
+        private void AdminForm_Load(object sender, EventArgs e)
         {
             // sanity check for user; although the form should never be loaded without user data
             if (Program.user == null)
@@ -86,7 +86,7 @@ namespace HMS.Forms
             LoadData();
         }
 
-        private void PatientsForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             // shouldn't ever be null anyway (without LoginForm, this form won't even be instantiated)
             // force the login form to close as that is the entry point of the program
@@ -120,23 +120,10 @@ namespace HMS.Forms
             LoadData();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnPatients_Click(object sender, EventArgs e)
         {
             isSwitching = true;
-            new AddPatientForm().Show();
-            Close();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            if (Program.user.Role < 4)
-            {
-                MessageBox.Show("You do not have the correct role to access this menu.", Program.title);
-                return;
-            }
-
-            isSwitching = true;
-            new AdminForm().Show();
+            new PatientsForm().Show();
             Close();
         }
     }

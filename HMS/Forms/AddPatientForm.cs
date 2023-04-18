@@ -39,7 +39,7 @@ namespace HMS.Forms
             }
 
             // attempt to insert patient
-            Patient.AddPatient(txtFirstName.Text, txtLastName.Text, txtDateOfBirth.Text, txtAddress.Text, txtPhoneNumber.Text);
+            Patient.AddPatient(txtFirstName.Text, txtLastName.Text, txtDateOfBirth.Text, txtGender.Text, txtAddress.Text, txtPhoneNumber.Text);
 
             // todo: proper success/error dialog
             Close();
