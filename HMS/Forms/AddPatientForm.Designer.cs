@@ -158,7 +158,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PlaceholderText = "First Name";
             txtFirstName.Size = new Size(214, 18);
-            txtFirstName.TabIndex = 11;
+            txtFirstName.TabIndex = 1;
             // 
             // txtDateOfBirth
             // 
@@ -171,7 +171,7 @@
             txtDateOfBirth.Name = "txtDateOfBirth";
             txtDateOfBirth.PlaceholderText = "Date of Birth";
             txtDateOfBirth.Size = new Size(214, 18);
-            txtDateOfBirth.TabIndex = 12;
+            txtDateOfBirth.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -183,7 +183,7 @@
             txtAddress.Name = "txtAddress";
             txtAddress.PlaceholderText = "Address";
             txtAddress.Size = new Size(214, 18);
-            txtAddress.TabIndex = 15;
+            txtAddress.TabIndex = 5;
             // 
             // pictureBox6
             // 
@@ -214,7 +214,7 @@
             txtLastName.Name = "txtLastName";
             txtLastName.PlaceholderText = "Last Name";
             txtLastName.Size = new Size(214, 18);
-            txtLastName.TabIndex = 18;
+            txtLastName.TabIndex = 2;
             // 
             // pictureBox8
             // 
@@ -244,7 +244,7 @@
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.PlaceholderText = "Phone Number";
             txtPhoneNumber.Size = new Size(214, 18);
-            txtPhoneNumber.TabIndex = 21;
+            txtPhoneNumber.TabIndex = 6;
             // 
             // pictureBox10
             // 
@@ -274,7 +274,7 @@
             txtGender.Name = "txtGender";
             txtGender.PlaceholderText = "Gender";
             txtGender.Size = new Size(214, 18);
-            txtGender.TabIndex = 24;
+            txtGender.TabIndex = 4;
             // 
             // pictureBox12
             // 

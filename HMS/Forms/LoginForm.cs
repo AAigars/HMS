@@ -15,7 +15,7 @@ namespace HMS.Forms
             // check the fields are valid
             if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
             {
-                MessageBox.Show("You have not specified an username or password!", Program.title); 
+                MessageBox.Show("You have not specified an username or password!", Program.title);
                 return;
             }
 

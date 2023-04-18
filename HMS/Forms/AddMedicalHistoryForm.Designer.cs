@@ -97,7 +97,7 @@
             txtHistory.Name = "txtHistory";
             txtHistory.PlaceholderText = "Fractured nose";
             txtHistory.Size = new Size(214, 137);
-            txtHistory.TabIndex = 15;
+            txtHistory.TabIndex = 1;
             // 
             // pictureBox6
             // 

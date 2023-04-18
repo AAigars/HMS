@@ -29,245 +29,244 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAppointmentForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnAssign = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtPatient = new System.Windows.Forms.TextBox();
-            this.txtTimestamp = new System.Windows.Forms.TextBox();
-            this.txtNote = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txtDoctor = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            lblSubtitle = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            btnAssign = new Label();
+            lblTitle = new Label();
+            txtPatient = new TextBox();
+            txtTimestamp = new TextBox();
+            txtNote = new TextBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            txtDoctor = new TextBox();
+            pictureBox8 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(134, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(134, 14);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 64);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // lblSubtitle
             // 
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.lblSubtitle.Location = new System.Drawing.Point(53, 111);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(234, 21);
-            this.lblSubtitle.TabIndex = 2;
-            this.lblSubtitle.Text = "Create an appointment";
-            this.lblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblSubtitle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSubtitle.ForeColor = Color.FromArgb(110, 114, 117);
+            lblSubtitle.Location = new Point(53, 111);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(234, 21);
+            lblSubtitle.TabIndex = 2;
+            lblSubtitle.Text = "Create an appointment";
+            lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox2.Location = new System.Drawing.Point(53, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox2.Location = new Point(53, 148);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(234, 35);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox3.Location = new System.Drawing.Point(53, 183);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox3.Location = new Point(53, 183);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(234, 3);
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox4.Location = new System.Drawing.Point(53, 277);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox4.Location = new Point(53, 277);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(234, 3);
+            pictureBox4.TabIndex = 7;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox5.Location = new System.Drawing.Point(53, 242);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
+            pictureBox5.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox5.Location = new Point(53, 242);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(234, 35);
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
             // 
             // btnAssign
             // 
-            this.btnAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnAssign.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAssign.ForeColor = System.Drawing.Color.White;
-            this.btnAssign.Location = new System.Drawing.Point(53, 343);
-            this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(234, 35);
-            this.btnAssign.TabIndex = 10;
-            this.btnAssign.Text = "Assign Appointment";
-            this.btnAssign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
+            btnAssign.BackColor = Color.FromArgb(102, 126, 234);
+            btnAssign.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAssign.ForeColor = Color.White;
+            btnAssign.Location = new Point(53, 343);
+            btnAssign.Name = "btnAssign";
+            btnAssign.Size = new Size(234, 35);
+            btnAssign.TabIndex = 10;
+            btnAssign.Text = "Assign Appointment";
+            btnAssign.TextAlign = ContentAlignment.MiddleCenter;
+            btnAssign.Click += btnAssign_Click;
             // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblTitle.Location = new System.Drawing.Point(83, 83);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(168, 25);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Appointment";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.FromArgb(102, 126, 234);
+            lblTitle.Location = new Point(83, 83);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(168, 25);
+            lblTitle.TabIndex = 1;
+            lblTitle.Text = "Appointment";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtPatient
             // 
-            this.txtPatient.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtPatient.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPatient.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtPatient.Location = new System.Drawing.Point(63, 156);
-            this.txtPatient.Name = "txtPatient";
-            this.txtPatient.PlaceholderText = "Patient";
-            this.txtPatient.Size = new System.Drawing.Size(214, 18);
-            this.txtPatient.TabIndex = 11;
+            txtPatient.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtPatient.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtPatient.BackColor = Color.FromArgb(237, 242, 246);
+            txtPatient.BorderStyle = BorderStyle.None;
+            txtPatient.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPatient.ForeColor = Color.FromArgb(110, 114, 117);
+            txtPatient.Location = new Point(63, 156);
+            txtPatient.Name = "txtPatient";
+            txtPatient.PlaceholderText = "Patient";
+            txtPatient.Size = new Size(214, 18);
+            txtPatient.TabIndex = 1;
             // 
             // txtTimestamp
             // 
-            this.txtTimestamp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtTimestamp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTimestamp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtTimestamp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTimestamp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTimestamp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtTimestamp.Location = new System.Drawing.Point(63, 249);
-            this.txtTimestamp.Name = "txtTimestamp";
-            this.txtTimestamp.PlaceholderText = "Check-in Time";
-            this.txtTimestamp.Size = new System.Drawing.Size(214, 18);
-            this.txtTimestamp.TabIndex = 12;
+            txtTimestamp.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtTimestamp.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtTimestamp.BackColor = Color.FromArgb(237, 242, 246);
+            txtTimestamp.BorderStyle = BorderStyle.None;
+            txtTimestamp.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTimestamp.ForeColor = Color.FromArgb(110, 114, 117);
+            txtTimestamp.Location = new Point(63, 249);
+            txtTimestamp.Name = "txtTimestamp";
+            txtTimestamp.PlaceholderText = "Check-in Time";
+            txtTimestamp.Size = new Size(214, 18);
+            txtTimestamp.TabIndex = 3;
             // 
             // txtNote
             // 
-            this.txtNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNote.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtNote.Location = new System.Drawing.Point(63, 296);
-            this.txtNote.Name = "txtNote";
-            this.txtNote.PlaceholderText = "Note";
-            this.txtNote.Size = new System.Drawing.Size(214, 18);
-            this.txtNote.TabIndex = 15;
+            txtNote.BackColor = Color.FromArgb(237, 242, 246);
+            txtNote.BorderStyle = BorderStyle.None;
+            txtNote.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNote.ForeColor = Color.FromArgb(110, 114, 117);
+            txtNote.Location = new Point(63, 296);
+            txtNote.Name = "txtNote";
+            txtNote.PlaceholderText = "Note";
+            txtNote.Size = new Size(214, 18);
+            txtNote.TabIndex = 4;
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox6.Location = new System.Drawing.Point(53, 324);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
+            pictureBox6.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox6.Location = new Point(53, 324);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(234, 3);
+            pictureBox6.TabIndex = 14;
+            pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox7.Location = new System.Drawing.Point(53, 289);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
+            pictureBox7.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox7.Location = new Point(53, 289);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(234, 35);
+            pictureBox7.TabIndex = 13;
+            pictureBox7.TabStop = false;
             // 
             // txtDoctor
             // 
-            this.txtDoctor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtDoctor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtDoctor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDoctor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDoctor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtDoctor.Location = new System.Drawing.Point(63, 202);
-            this.txtDoctor.Name = "txtDoctor";
-            this.txtDoctor.PlaceholderText = "Doctor";
-            this.txtDoctor.Size = new System.Drawing.Size(214, 18);
-            this.txtDoctor.TabIndex = 18;
+            txtDoctor.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtDoctor.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtDoctor.BackColor = Color.FromArgb(237, 242, 246);
+            txtDoctor.BorderStyle = BorderStyle.None;
+            txtDoctor.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDoctor.ForeColor = Color.FromArgb(110, 114, 117);
+            txtDoctor.Location = new Point(63, 202);
+            txtDoctor.Name = "txtDoctor";
+            txtDoctor.PlaceholderText = "Doctor";
+            txtDoctor.Size = new Size(214, 18);
+            txtDoctor.TabIndex = 2;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox8.Location = new System.Drawing.Point(53, 230);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
+            pictureBox8.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox8.Location = new Point(53, 230);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(234, 3);
+            pictureBox8.TabIndex = 17;
+            pictureBox8.TabStop = false;
             // 
             // pictureBox9
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox9.Location = new System.Drawing.Point(53, 195);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox9.TabIndex = 16;
-            this.pictureBox9.TabStop = false;
+            pictureBox9.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox9.Location = new Point(53, 195);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(234, 35);
+            pictureBox9.TabIndex = 16;
+            pictureBox9.TabStop = false;
             // 
             // AddAppointmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(334, 395);
-            this.Controls.Add(this.txtDoctor);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.txtNote);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.txtTimestamp);
-            this.Controls.Add(this.txtPatient);
-            this.Controls.Add(this.btnAssign);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "AddAppointmentForm";
-            this.ShowIcon = false;
-            this.Text = "Hospital Management System";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddAppointmentForm_FormClosed);
-            this.Load += new System.EventHandler(this.AddAppointmentForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(334, 395);
+            Controls.Add(txtDoctor);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox9);
+            Controls.Add(txtNote);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox7);
+            Controls.Add(txtTimestamp);
+            Controls.Add(txtPatient);
+            Controls.Add(btnAssign);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(lblSubtitle);
+            Controls.Add(lblTitle);
+            Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "AddAppointmentForm";
+            ShowIcon = false;
+            Text = "Hospital Management System";
+            FormClosed += AddAppointmentForm_FormClosed;
+            Load += AddAppointmentForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

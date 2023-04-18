@@ -33,7 +33,7 @@ namespace HMS.Database
         public long Role { get; set; }
 
         [DbColumn("username")]
-        public string Username { get; set; }
+        public string? Username { get; set; }
     }
 
     public static class User

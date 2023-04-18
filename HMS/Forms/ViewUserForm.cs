@@ -48,9 +48,10 @@ namespace HMS.Forms
                     cbRole.Items.Add(role);
                 }
 
-                cbRole.SelectedItem = roles.Where(r => r.Id == user.Role).First();
                 cbRole.SelectedIndexChanged += cbRole_SelectedIndexChanged;
-            } else
+            }
+
+            if (user.Role > 0)
             {
                 cbRole.SelectedItem = roles.Where(r => r.Id == user.Role).First();
             }
@@ -64,10 +65,10 @@ namespace HMS.Forms
                     cbDepartment.Items.Add(department);
                 }
 
-                cbDepartment.SelectedItem = departments.Where(d => d.Id == user.DepartmentId).First();
                 cbDepartment.SelectedIndexChanged += cbDepartment_SelectedIndexChanged;
-            } 
-            else
+            }
+
+            if (user.DepartmentId > 0)
             {
                 cbDepartment.SelectedItem = departments.Where(d => d.Id == user.DepartmentId).First();
             }

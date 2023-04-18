@@ -121,7 +121,7 @@
             txtMedicine.Name = "txtMedicine";
             txtMedicine.PlaceholderText = "Medicine";
             txtMedicine.Size = new Size(214, 18);
-            txtMedicine.TabIndex = 12;
+            txtMedicine.TabIndex = 1;
             // 
             // txtDosage
             // 
@@ -133,7 +133,7 @@
             txtDosage.Name = "txtDosage";
             txtDosage.PlaceholderText = "Dosage";
             txtDosage.Size = new Size(214, 18);
-            txtDosage.TabIndex = 15;
+            txtDosage.TabIndex = 2;
             // 
             // pictureBox6
             // 

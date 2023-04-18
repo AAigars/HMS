@@ -111,7 +111,7 @@
             txtFirstName.Name = "txtFirstName";
             txtFirstName.PlaceholderText = "First Name";
             txtFirstName.Size = new Size(214, 18);
-            txtFirstName.TabIndex = 5;
+            txtFirstName.TabIndex = 1;
             // 
             // txtPassword
             // 
@@ -124,7 +124,7 @@
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(214, 18);
-            txtPassword.TabIndex = 8;
+            txtPassword.TabIndex = 3;
             // 
             // pictureBox4
             // 
@@ -152,7 +152,7 @@
             lblLogin.Location = new Point(73, 335);
             lblLogin.Name = "lblLogin";
             lblLogin.Size = new Size(193, 21);
-            lblLogin.TabIndex = 11;
+            lblLogin.TabIndex = 5;
             lblLogin.Text = "Already have an account?";
             lblLogin.Click += lblLogin_Click;
             // 
@@ -164,7 +164,7 @@
             btnRegister.Location = new Point(53, 290);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(234, 35);
-            btnRegister.TabIndex = 12;
+            btnRegister.TabIndex = 4;
             btnRegister.Text = "Register";
             btnRegister.TextAlign = ContentAlignment.MiddleCenter;
             btnRegister.MouseClick += btnRegister_Click;
@@ -179,7 +179,7 @@
             txtLastName.Name = "txtLastName";
             txtLastName.PlaceholderText = "Last Name";
             txtLastName.Size = new Size(214, 18);
-            txtLastName.TabIndex = 15;
+            txtLastName.TabIndex = 2;
             // 
             // pictureBox6
             // 
