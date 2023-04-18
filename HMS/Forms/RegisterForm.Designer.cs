@@ -29,172 +29,211 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lblLogin = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            lblTitle = new Label();
+            lblSubtitle = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            txtFirstName = new TextBox();
+            txtPassword = new TextBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            lblLogin = new Label();
+            btnRegister = new Label();
+            txtLastName = new TextBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(134, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(134, 14);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 64);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblTitle.Location = new System.Drawing.Point(124, 86);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(81, 25);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Register";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.FromArgb(102, 126, 234);
+            lblTitle.Location = new Point(124, 86);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(81, 25);
+            lblTitle.TabIndex = 1;
+            lblTitle.Text = "Register";
             // 
             // lblSubtitle
             // 
-            this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.lblSubtitle.Location = new System.Drawing.Point(94, 111);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(149, 21);
-            this.lblSubtitle.TabIndex = 2;
-            this.lblSubtitle.Text = "Create your account";
+            lblSubtitle.AutoSize = true;
+            lblSubtitle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSubtitle.ForeColor = Color.FromArgb(110, 114, 117);
+            lblSubtitle.Location = new Point(94, 111);
+            lblSubtitle.Name = "lblSubtitle";
+            lblSubtitle.Size = new Size(149, 21);
+            lblSubtitle.TabIndex = 2;
+            lblSubtitle.Text = "Create your account";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox2.Location = new System.Drawing.Point(53, 148);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox2.Location = new Point(53, 148);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(234, 35);
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox3.Location = new System.Drawing.Point(53, 183);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox3.Location = new Point(53, 183);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(234, 3);
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
-            // txtUsername
+            // txtFirstName
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtUsername.Location = new System.Drawing.Point(61, 157);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PlaceholderText = "Username";
-            this.txtUsername.Size = new System.Drawing.Size(214, 18);
-            this.txtUsername.TabIndex = 5;
+            txtFirstName.BackColor = Color.FromArgb(237, 242, 246);
+            txtFirstName.BorderStyle = BorderStyle.None;
+            txtFirstName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFirstName.ForeColor = Color.FromArgb(110, 114, 117);
+            txtFirstName.Location = new Point(61, 157);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.PlaceholderText = "First Name";
+            txtFirstName.Size = new Size(214, 18);
+            txtFirstName.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(114)))), ((int)(((byte)(117)))));
-            this.txtPassword.Location = new System.Drawing.Point(61, 207);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.PlaceholderText = "Password";
-            this.txtPassword.Size = new System.Drawing.Size(214, 18);
-            this.txtPassword.TabIndex = 8;
+            txtPassword.BackColor = Color.FromArgb(237, 242, 246);
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.ForeColor = Color.FromArgb(110, 114, 117);
+            txtPassword.Location = new Point(61, 251);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Password";
+            txtPassword.Size = new Size(214, 18);
+            txtPassword.TabIndex = 8;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(212)))), ((int)(((byte)(230)))));
-            this.pictureBox4.Location = new System.Drawing.Point(53, 233);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(234, 3);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox4.Location = new Point(53, 277);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(234, 3);
+            pictureBox4.TabIndex = 7;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(246)))));
-            this.pictureBox5.Location = new System.Drawing.Point(53, 198);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(234, 35);
-            this.pictureBox5.TabIndex = 6;
-            this.pictureBox5.TabStop = false;
+            pictureBox5.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox5.Location = new Point(53, 242);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(234, 35);
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
             // 
             // lblLogin
             // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.lblLogin.Location = new System.Drawing.Point(73, 291);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(193, 21);
-            this.lblLogin.TabIndex = 11;
-            this.lblLogin.Text = "Already have an account?";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
+            lblLogin.AutoSize = true;
+            lblLogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLogin.ForeColor = Color.FromArgb(102, 126, 234);
+            lblLogin.Location = new Point(73, 335);
+            lblLogin.Name = "lblLogin";
+            lblLogin.Size = new Size(193, 21);
+            lblLogin.TabIndex = 11;
+            lblLogin.Text = "Already have an account?";
+            lblLogin.Click += lblLogin_Click;
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(126)))), ((int)(((byte)(234)))));
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(53, 246);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(234, 35);
-            this.btnRegister.TabIndex = 12;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegister.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnRegister_Click);
+            btnRegister.BackColor = Color.FromArgb(102, 126, 234);
+            btnRegister.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegister.ForeColor = Color.White;
+            btnRegister.Location = new Point(53, 290);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(234, 35);
+            btnRegister.TabIndex = 12;
+            btnRegister.Text = "Register";
+            btnRegister.TextAlign = ContentAlignment.MiddleCenter;
+            btnRegister.MouseClick += btnRegister_Click;
+            // 
+            // txtLastName
+            // 
+            txtLastName.BackColor = Color.FromArgb(237, 242, 246);
+            txtLastName.BorderStyle = BorderStyle.None;
+            txtLastName.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLastName.ForeColor = Color.FromArgb(110, 114, 117);
+            txtLastName.Location = new Point(61, 205);
+            txtLastName.Name = "txtLastName";
+            txtLastName.PlaceholderText = "Last Name";
+            txtLastName.Size = new Size(214, 18);
+            txtLastName.TabIndex = 15;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackColor = Color.FromArgb(205, 212, 230);
+            pictureBox6.Location = new Point(53, 231);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(234, 3);
+            pictureBox6.TabIndex = 14;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.BackColor = Color.FromArgb(237, 242, 246);
+            pictureBox7.Location = new Point(53, 196);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(234, 35);
+            pictureBox7.TabIndex = 13;
+            pictureBox7.TabStop = false;
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(334, 332);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "RegisterForm";
-            this.ShowIcon = false;
-            this.Text = "Hospital Management System";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(334, 381);
+            Controls.Add(txtLastName);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox7);
+            Controls.Add(btnRegister);
+            Controls.Add(lblLogin);
+            Controls.Add(txtPassword);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox5);
+            Controls.Add(txtFirstName);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(lblSubtitle);
+            Controls.Add(lblTitle);
+            Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            Name = "RegisterForm";
+            ShowIcon = false;
+            Text = "Hospital Management System";
+            FormClosed += RegisterForm_FormClosed;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -204,11 +243,14 @@
         private Label lblSubtitle;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
-        private TextBox txtUsername;
+        private TextBox txtFirstName;
         private TextBox txtPassword;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private Label lblLogin;
         private Label btnRegister;
+        private TextBox txtLastName;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
     }
 }

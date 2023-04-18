@@ -31,11 +31,46 @@ namespace HMS.Forms
             lblDateOfBirth.Text = user.DateOfBirth;
             lblGender.Text = user.Gender;
             lblPhoneNumber.Text = user.PhoneNumber;
-            lblAddress.Text = string.Join("\n", user.Address.Split(","));
+
+            if (user.Address != null)
+            {
+                lblAddress.Text = string.Join("\n", user.Address.Split(","));
+            }
 
             lblUsername.Text = user.Username;
-            lblRole.Text = user.Role.ToString();
-            lblDepartment.Text = user.DepartmentId.ToString();
+
+            // role selection
+            var roles = Role.GetRoles();
+            if (cbRole.Items.Count == 0)
+            {
+                foreach (var role in roles)
+                {
+                    cbRole.Items.Add(role);
+                }
+
+                cbRole.SelectedItem = roles.Where(r => r.Id == user.Role).First();
+                cbRole.SelectedIndexChanged += cbRole_SelectedIndexChanged;
+            } else
+            {
+                cbRole.SelectedItem = roles.Where(r => r.Id == user.Role).First();
+            }
+
+            // department selection
+            var departments = Department.GetDepartments();
+            if (cbDepartment.Items.Count == 0)
+            {
+                foreach (var department in departments)
+                {
+                    cbDepartment.Items.Add(department);
+                }
+
+                cbDepartment.SelectedItem = departments.Where(d => d.Id == user.DepartmentId).First();
+                cbDepartment.SelectedIndexChanged += cbDepartment_SelectedIndexChanged;
+            } 
+            else
+            {
+                cbDepartment.SelectedItem = departments.Where(d => d.Id == user.DepartmentId).First();
+            }
         }
 
         private void UserForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -107,7 +142,7 @@ namespace HMS.Forms
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            if (Program.user.Role < 4)
+            if (Program.user.Role < 5)
             {
                 MessageBox.Show("You do not have the correct role to access this menu.", Program.title);
                 return;
@@ -124,6 +159,26 @@ namespace HMS.Forms
             if (input.Length <= 0) return;
 
             User.ResetPassword(user, input);
+        }
+
+        private void cbRole_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            var role = cbRole.Items[cbRole.SelectedIndex] as RoleModel;
+            if (role == null) return;
+
+            user.Role = role.Id;
+            User.UpdateUser(user);
+            UserForm_Load(this, null);
+        }
+
+        private void cbDepartment_SelectedIndexChanged(object? sender, EventArgs e)
+        {
+            var department = cbDepartment.Items[cbDepartment.SelectedIndex] as DepartmentModel;
+            if (department == null) return;
+
+            user.DepartmentId = department.Id;
+            User.UpdateUser(user);
+            UserForm_Load(this, null);
         }
     }
 }

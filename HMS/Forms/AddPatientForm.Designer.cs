@@ -69,7 +69,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(134, 14);
+            pictureBox1.Location = new Point(265, 12);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(64, 64);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -80,11 +80,11 @@
             // 
             lblSubtitle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSubtitle.ForeColor = Color.FromArgb(110, 114, 117);
-            lblSubtitle.Location = new Point(53, 111);
+            lblSubtitle.Location = new Point(184, 109);
             lblSubtitle.Name = "lblSubtitle";
             lblSubtitle.Size = new Size(234, 21);
             lblSubtitle.TabIndex = 2;
-            lblSubtitle.Text = "Create an patient";
+            lblSubtitle.Text = "Create a new patient";
             lblSubtitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -128,9 +128,9 @@
             btnAssign.BackColor = Color.FromArgb(102, 126, 234);
             btnAssign.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnAssign.ForeColor = Color.White;
-            btnAssign.Location = new Point(53, 429);
+            btnAssign.Location = new Point(53, 298);
             btnAssign.Name = "btnAssign";
-            btnAssign.Size = new Size(234, 35);
+            btnAssign.Size = new Size(481, 35);
             btnAssign.TabIndex = 10;
             btnAssign.Text = "Create Patient";
             btnAssign.TextAlign = ContentAlignment.MiddleCenter;
@@ -140,7 +140,7 @@
             // 
             lblTitle.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(102, 126, 234);
-            lblTitle.Location = new Point(83, 83);
+            lblTitle.Location = new Point(214, 81);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(168, 25);
             lblTitle.TabIndex = 1;
@@ -179,7 +179,7 @@
             txtAddress.BorderStyle = BorderStyle.None;
             txtAddress.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtAddress.ForeColor = Color.FromArgb(110, 114, 117);
-            txtAddress.Location = new Point(63, 337);
+            txtAddress.Location = new Point(310, 202);
             txtAddress.Name = "txtAddress";
             txtAddress.PlaceholderText = "Address";
             txtAddress.Size = new Size(214, 18);
@@ -188,7 +188,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.FromArgb(205, 212, 230);
-            pictureBox6.Location = new Point(53, 365);
+            pictureBox6.Location = new Point(300, 230);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(234, 3);
             pictureBox6.TabIndex = 14;
@@ -197,7 +197,7 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.FromArgb(237, 242, 246);
-            pictureBox7.Location = new Point(53, 330);
+            pictureBox7.Location = new Point(300, 195);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(234, 35);
             pictureBox7.TabIndex = 13;
@@ -240,7 +240,7 @@
             txtPhoneNumber.BorderStyle = BorderStyle.None;
             txtPhoneNumber.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtPhoneNumber.ForeColor = Color.FromArgb(110, 114, 117);
-            txtPhoneNumber.Location = new Point(63, 385);
+            txtPhoneNumber.Location = new Point(310, 249);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.PlaceholderText = "Phone Number";
             txtPhoneNumber.Size = new Size(214, 18);
@@ -249,7 +249,7 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.FromArgb(205, 212, 230);
-            pictureBox10.Location = new Point(53, 413);
+            pictureBox10.Location = new Point(300, 277);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(234, 3);
             pictureBox10.TabIndex = 20;
@@ -258,7 +258,7 @@
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.FromArgb(237, 242, 246);
-            pictureBox11.Location = new Point(53, 378);
+            pictureBox11.Location = new Point(300, 242);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(234, 35);
             pictureBox11.TabIndex = 19;
@@ -270,7 +270,7 @@
             txtGender.BorderStyle = BorderStyle.None;
             txtGender.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtGender.ForeColor = Color.FromArgb(110, 114, 117);
-            txtGender.Location = new Point(63, 295);
+            txtGender.Location = new Point(310, 156);
             txtGender.Name = "txtGender";
             txtGender.PlaceholderText = "Gender";
             txtGender.Size = new Size(214, 18);
@@ -279,7 +279,7 @@
             // pictureBox12
             // 
             pictureBox12.BackColor = Color.FromArgb(205, 212, 230);
-            pictureBox12.Location = new Point(53, 323);
+            pictureBox12.Location = new Point(300, 184);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(234, 3);
             pictureBox12.TabIndex = 23;
@@ -288,7 +288,7 @@
             // pictureBox13
             // 
             pictureBox13.BackColor = Color.FromArgb(237, 242, 246);
-            pictureBox13.Location = new Point(53, 288);
+            pictureBox13.Location = new Point(300, 149);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(234, 35);
             pictureBox13.TabIndex = 22;
@@ -299,7 +299,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(334, 483);
+            ClientSize = new Size(597, 360);
             Controls.Add(txtGender);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox13);

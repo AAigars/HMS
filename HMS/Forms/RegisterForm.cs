@@ -5,6 +5,8 @@ namespace HMS.Forms
 {
     public partial class RegisterForm : Form
     {
+        private bool isSwitching = false;
+
         public RegisterForm()
         {
             InitializeComponent();
@@ -13,15 +15,17 @@ namespace HMS.Forms
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // check the fields are valid
-            if (txtUsername.Text == string.Empty || txtPassword.Text == string.Empty)
+            if (txtFirstName.Text == string.Empty || txtLastName.Text == string.Empty || txtPassword.Text == string.Empty)
             {
-                MessageBox.Show("You have not specified an username or password!", Program.title); 
+                MessageBox.Show("You have not filled in all the required fields!", Program.title);
                 return;
             }
 
+            var username = string.Format("{0}.{1}", txtFirstName.Text.ToLower(), txtLastName.Text.ToLower());
+
             // check if user exists
             var exists = new SQLiteCommand("SELECT COUNT(id) FROM User WHERE username = ?", Program.databaseManager.GetConnection());
-            exists.Parameters.Add(new SQLiteParameter("username", txtUsername.Text));
+            exists.Parameters.Add(new SQLiteParameter("username", username));
 
             // execute query and retrieve amount of users with the same username
             var count = Program.databaseManager.ExecuteQuery<long>(exists).FirstOrDefault();
@@ -32,12 +36,16 @@ namespace HMS.Forms
             }
 
             // attempt to insert the new user into the table
-            var user = User.RegisterUser(txtUsername.Text, txtPassword.Text);
+            var user = User.RegisterUser(txtFirstName.Text, txtLastName.Text, username, txtPassword.Text);
 
             // check if the user is valid
             if (user != null)
             {
-                // todo: account needs verification
+                MessageBox.Show("Your account has been created, please contact the system admin to approve the account!", Program.title);
+
+                isSwitching = true;
+                Program.loginForm.Show();
+                Close();
             }
             else
             {
@@ -60,7 +68,7 @@ namespace HMS.Forms
             // shouldn't ever be null anyway (without LoginForm, this form won't even be instantiated)
             // force the login form to close as that is the entry point of the program
             // otherwise closing this form will cause the program to remain open in the background.
-            if (Program.loginForm != null && !Program.loginForm.Visible)
+            if (Program.loginForm != null && !Program.loginForm.Visible && !isSwitching)
                 Program.loginForm.Close();
         }
     }

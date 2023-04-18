@@ -127,7 +127,7 @@ namespace HMS.Forms
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            if (Program.user.Role < 4)
+            if (Program.user.Role < 5)
             {
                 MessageBox.Show("You do not have the correct role to access this menu.", Program.title);
                 return;

@@ -48,14 +48,14 @@
             label7 = new Label();
             lblPhoneNumber = new Label();
             label8 = new Label();
-            lblRole = new Label();
             label4 = new Label();
             lblPassword = new Label();
             label9 = new Label();
             lblUsername = new Label();
             label11 = new Label();
-            lblDepartment = new Label();
             label6 = new Label();
+            cbRole = new ComboBox();
+            cbDepartment = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -282,18 +282,6 @@
             label8.TabIndex = 31;
             label8.Text = "Address";
             // 
-            // lblRole
-            // 
-            lblRole.BackColor = Color.White;
-            lblRole.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblRole.ForeColor = Color.FromArgb(110, 114, 117);
-            lblRole.Location = new Point(463, 192);
-            lblRole.Name = "lblRole";
-            lblRole.Padding = new Padding(5, 0, 0, 0);
-            lblRole.Size = new Size(177, 33);
-            lblRole.TabIndex = 37;
-            lblRole.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -356,18 +344,6 @@
             label11.TabIndex = 32;
             label11.Text = "Username";
             // 
-            // lblDepartment
-            // 
-            lblDepartment.BackColor = Color.White;
-            lblDepartment.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDepartment.ForeColor = Color.FromArgb(110, 114, 117);
-            lblDepartment.Location = new Point(463, 232);
-            lblDepartment.Name = "lblDepartment";
-            lblDepartment.Padding = new Padding(5, 0, 0, 0);
-            lblDepartment.Size = new Size(177, 33);
-            lblDepartment.TabIndex = 39;
-            lblDepartment.TextAlign = ContentAlignment.MiddleLeft;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -380,15 +356,37 @@
             label6.TabIndex = 38;
             label6.Text = "Department";
             // 
+            // cbRole
+            // 
+            cbRole.FlatStyle = FlatStyle.Flat;
+            cbRole.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbRole.ForeColor = Color.FromArgb(110, 114, 117);
+            cbRole.FormattingEnabled = true;
+            cbRole.Location = new Point(463, 195);
+            cbRole.Name = "cbRole";
+            cbRole.Size = new Size(177, 29);
+            cbRole.TabIndex = 40;
+            // 
+            // cbDepartment
+            // 
+            cbDepartment.FlatStyle = FlatStyle.Flat;
+            cbDepartment.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbDepartment.ForeColor = Color.FromArgb(110, 114, 117);
+            cbDepartment.FormattingEnabled = true;
+            cbDepartment.Location = new Point(463, 235);
+            cbDepartment.Name = "cbDepartment";
+            cbDepartment.Size = new Size(177, 29);
+            cbDepartment.TabIndex = 41;
+            // 
             // ViewUserForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(901, 355);
-            Controls.Add(lblDepartment);
+            Controls.Add(cbDepartment);
+            Controls.Add(cbRole);
             Controls.Add(label6);
-            Controls.Add(lblRole);
             Controls.Add(label4);
             Controls.Add(lblPassword);
             Controls.Add(label9);
@@ -452,13 +450,13 @@
         private Label label7;
         private Label lblPhoneNumber;
         private Label label8;
-        private Label lblRole;
         private Label label4;
         private Label lblPassword;
         private Label label9;
         private Label lblUsername;
         private Label label11;
-        private Label lblDepartment;
         private Label label6;
+        private ComboBox cbRole;
+        private ComboBox cbDepartment;
     }
 }

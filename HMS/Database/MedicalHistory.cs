@@ -41,7 +41,7 @@ namespace HMS.Database
         public static MedicalHistoryModel? AddMedicalHistory(PatientModel patient, string note)
         {
             // set up prepared statement
-            var command = new SQLiteCommand("INSERT INTO Patient_Medical (patient_id, doctor_id, timestamp, note) VALUES (?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            var command = new SQLiteCommand("INSERT INTO Patient_Medical (patient_id, doctor_id, timestamp, note) VALUES (?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
             command.Parameters.Add(new SQLiteParameter("doctor_id", Program.user.Id));           
             command.Parameters.Add(new SQLiteParameter("patient_id", patient.Id));
             command.Parameters.Add(new SQLiteParameter("timestamp", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString()));

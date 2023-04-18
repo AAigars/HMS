@@ -95,10 +95,12 @@ namespace HMS.Database
             return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();
         }
 
-        public static UserModel? RegisterUser(string username, string password)
+        public static UserModel? RegisterUser(string first_name, string last_name, string username, string password)
         {
             // set up prepared statement
-            var command = new SQLiteCommand("INSERT INTO User (username, password) VALUES (?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            var command = new SQLiteCommand("INSERT INTO User (first_name, last_name, username, password) VALUES (?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            command.Parameters.Add(new SQLiteParameter("first_name", first_name));
+            command.Parameters.Add(new SQLiteParameter("last_name", last_name));
             command.Parameters.Add(new SQLiteParameter("username", username));
             command.Parameters.Add(new SQLiteParameter("password", password));
 
@@ -119,7 +121,7 @@ namespace HMS.Database
         public static UserModel? UpdateUser(UserModel user)
         {
             // set up prepared statement
-            var command = new SQLiteCommand("UPDATE User SET first_name = @first_name, last_name = @last_name, date_of_birth = @date_of_birth, gender = @gender, address = @address, phone_number = @phone_number WHERE id = @id", Program.databaseManager.GetConnection());
+            var command = new SQLiteCommand("UPDATE User SET first_name = @first_name, last_name = @last_name, date_of_birth = @date_of_birth, gender = @gender, address = @address, phone_number = @phone_number, role = @role, department_id = @department_id WHERE id = @id", Program.databaseManager.GetConnection());
             command.Parameters.Add(new SQLiteParameter("@id", user.Id));
             command.Parameters.Add(new SQLiteParameter("@first_name", user.FirstName));
             command.Parameters.Add(new SQLiteParameter("@last_name", user.LastName));
@@ -127,6 +129,8 @@ namespace HMS.Database
             command.Parameters.Add(new SQLiteParameter("@gender", user.Gender));
             command.Parameters.Add(new SQLiteParameter("@address", user.Address));
             command.Parameters.Add(new SQLiteParameter("@phone_number", user.PhoneNumber));
+            command.Parameters.Add(new SQLiteParameter("@role", user.Role));
+            command.Parameters.Add(new SQLiteParameter("@department_id", user.DepartmentId));
 
             // attempt to update user data
             return Program.databaseManager.ExecuteMappedQuery<UserModel>(command).FirstOrDefault();

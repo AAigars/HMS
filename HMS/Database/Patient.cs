@@ -70,7 +70,7 @@ namespace HMS.Database
         public static PatientModel? AddPatient(string firstName, string lastName, string dateOfBirth, string gender, string address, string phoneNumber)
         {
             // set up prepared statement
-            var command = new SQLiteCommand("INSERT INTO Patient (first_name, last_name, date_of_birth, address, phone_number) VALUES (?, ?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
+            var command = new SQLiteCommand("INSERT INTO Patient (first_name, last_name, date_of_birth, gender, address, phone_number) VALUES (?, ?, ?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
             command.Parameters.Add(new SQLiteParameter("first_name", firstName));
             command.Parameters.Add(new SQLiteParameter("last_name", lastName));
             command.Parameters.Add(new SQLiteParameter("date_of_birth", dateOfBirth));

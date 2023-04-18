@@ -18,7 +18,7 @@ namespace HMSUnitTests
         public void Create_Delete_User()
         {               
             // create user
-            var user = User.RegisterUser("test_user", "password123");
+            var user = User.RegisterUser("John", "Doe", "john.doe", "password123");
 
             // check if object returned
             if (user == null) Assert.Fail();
