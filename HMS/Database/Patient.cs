@@ -47,7 +47,7 @@ namespace HMS.Database
             command.Parameters.Add(new SQLiteParameter("first_name", firstName));
             command.Parameters.Add(new SQLiteParameter("last_name", lastName));
 
-            // attempt to fetch user
+            // attempt to fetch patient
             return Program.databaseManager.ExecuteMappedQuery<PatientModel>(command).FirstOrDefault();
         }
 

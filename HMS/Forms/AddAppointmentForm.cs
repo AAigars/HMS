@@ -62,11 +62,11 @@ namespace HMS.Forms
 
             // auto complete check in time
             var times = new List<DateTime>();
-            var currentTime = DateTime.ParseExact(DateTime.Now.ToShortDateString() + " 08:00:00", "dd/MM/yyyy HH:mm:ss", null);
+            var currentTime = DateTime.ParseExact(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), "dd/MM/yyyy HH:mm", null);
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 96; i++)
             {
-                currentTime = currentTime.AddMinutes(30);
+                currentTime = currentTime.AddMinutes(15);
                 times.Add(currentTime);
             }
 

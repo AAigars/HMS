@@ -19,7 +19,7 @@ namespace HMS.Database
             // set up prepared statement
             var command = new SQLiteCommand("SELECT * FROM Medicine", Program.databaseManager.GetConnection());
 
-            // attempt to fetch history
+            // attempt to fetch medicine
             return Program.databaseManager.ExecuteMappedQuery<MedicineModel>(command);
         }
 
@@ -29,7 +29,7 @@ namespace HMS.Database
             var command = new SQLiteCommand("SELECT * FROM Medicine WHERE id = ?", Program.databaseManager.GetConnection());
             command.Parameters.Add(new SQLiteParameter("id", id));
 
-            // attempt to fetch history
+            // attempt to fetch medicine
             return Program.databaseManager.ExecuteMappedQuery<MedicineModel>(command).FirstOrDefault();
         }
     }

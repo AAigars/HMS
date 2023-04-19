@@ -42,12 +42,12 @@ namespace HMS.Database
         {
             // set up prepared statement
             var command = new SQLiteCommand("INSERT INTO Patient_Medical (patient_id, doctor_id, timestamp, note) VALUES (?, ?, ?, ?) RETURNING *", Program.databaseManager.GetConnection());
-            command.Parameters.Add(new SQLiteParameter("doctor_id", Program.user.Id));           
             command.Parameters.Add(new SQLiteParameter("patient_id", patient.Id));
+            command.Parameters.Add(new SQLiteParameter("doctor_id", Program.user.Id));           
             command.Parameters.Add(new SQLiteParameter("timestamp", DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString()));
             command.Parameters.Add(new SQLiteParameter("note", note));
 
-            // attempt to insert the new appointment into the table
+            // attempt to insert the new medical history into the table
             return Program.databaseManager.ExecuteMappedQuery<MedicalHistoryModel>(command).FirstOrDefault();
         }
 

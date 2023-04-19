@@ -52,7 +52,7 @@ namespace HMS.Database
             command.Parameters.Add(new SQLiteParameter("medicine", medicine));
             command.Parameters.Add(new SQLiteParameter("dosage", dosage));
 
-            // attempt to insert the new appointment into the table
+            // attempt to insert the new prescription into the table
             return Program.databaseManager.ExecuteMappedQuery<PrescriptionModel>(command).FirstOrDefault();
         }
 
